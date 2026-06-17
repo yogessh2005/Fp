@@ -125,3 +125,47 @@
 2026-06-17 13:08:09,338 - INFO - Sessionwise Estimate using next day date: 18062026 (selected was 17062026)
 2026-06-17 13:08:18,436 - INFO - Closed connection to SK
 2026-06-17 13:08:20,447 - INFO - Email scheduler cleaned up
+2026-06-17 15:15:54,201 - INFO - Application started - Login page initialized
+2026-06-17 15:16:56,734 - INFO - Application started - Login page initialized
+2026-06-17 15:17:12,247 - INFO - User logged in: sk_admin
+2026-06-17 15:17:12,255 - INFO - Created temp directory: /home/yogesh/Documents/fp_1/Fp/temp
+2026-06-17 15:17:12,258 - INFO - Email scheduler running in background
+2026-06-17 15:17:12,258 - INFO - Scheduler thread started
+2026-06-17 15:17:12,463 - INFO - Main application opened for SK
+2026-06-17 15:17:13,300 - INFO - Connected to database: SK
+2026-06-17 15:17:13,372 - INFO - Overall Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 15:17:14,062 - INFO - Sessionwise Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 15:17:17,146 - INFO - Email scheduler cleaned up
+2026-06-17 15:18:47,946 - INFO - Application started - Login page initialized
+2026-06-17 15:18:54,621 - INFO - User logged in: sk_admin
+2026-06-17 15:18:54,624 - INFO - Email scheduler running in background
+2026-06-17 15:18:54,625 - INFO - Scheduler thread started
+2026-06-17 15:18:54,849 - INFO - Main application opened for SK
+2026-06-17 15:18:55,547 - INFO - Connected to database: SK
+2026-06-17 15:18:55,595 - INFO - Overall Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 15:18:55,719 - INFO - Sessionwise Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 15:19:16,890 - INFO - Overall Estimate using next day date: 06062026 (selected was 05062026)
+2026-06-17 15:19:17,062 - INFO - Sessionwise Estimate using next day date: 06062026 (selected was 05062026)
+2026-06-17 15:21:34,294 - INFO - Email scheduler cleaned up
+2026-06-17 15:21:42,658 - INFO - Application started - Login page initialized
+2026-06-17 15:21:54,468 - INFO - User logged in: sk_admin
+2026-06-17 15:21:54,472 - INFO - Trigger scheduled at 17:00
+2026-06-17 15:21:54,474 - INFO - Email scheduler running in background
+2026-06-17 15:21:54,475 - INFO - Scheduler thread started
+2026-06-17 15:21:54,620 - INFO - Main application opened for SK
+2026-06-17 15:21:55,208 - INFO - Connected to database: SK
+2026-06-17 15:21:55,257 - INFO - Overall Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 15:21:55,379 - INFO - Sessionwise Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 15:21:57,175 - INFO - Overall Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 15:21:57,307 - INFO - Sessionwise Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 15:22:29,513 - INFO - Email scheduler cleaned up
+2026-06-17 15:22:35,223 - INFO - Application started - Login page initialized
+2026-06-17 15:23:08,705 - INFO - User logged in: sk_admin
+2026-06-17 15:23:08,709 - INFO - Trigger scheduled at 17:00
+2026-06-17 15:23:08,711 - INFO - Email scheduler running in background
+2026-06-17 15:23:08,711 - INFO - Scheduler thread started
+2026-06-17 15:23:08,848 - INFO - Main application opened for SK
+2026-06-17 15:23:09,484 - INFO - Connected to database: SK
+2026-06-17 15:23:09,590 - INFO - Overall Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 15:23:09,772 - INFO - Sessionwise Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 15:23:25,858 - INFO - Email scheduler cleaned up

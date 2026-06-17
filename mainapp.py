@@ -481,7 +481,9 @@ class MainApp(tk.Toplevel):
                 self.update_status(f"✓ Refreshed {module_name} for {self.selected_date_display}")
             except Exception as e:
                 self.logger.error(f"Failed to refresh {module_name}: {e}")
-                self.update_status(f"�    def create_main_content(self):
+                self.update_status(f"✗ Failed to refresh {module_name}: {e}")
+
+    def create_main_content(self):
         self.main_content = tk.Frame(self, bg=Config.COLORS["light"])
         self.main_content.pack(fill="both", expand=True)
         
@@ -527,7 +529,7 @@ class MainApp(tk.Toplevel):
         
         # Select first tab by default
         if self.tab_buttons:
-            self.tab_buttons[0].set_active(True)me']] = self.create_enhanced_tab(tab_frame, module['name'])
+            self.tab_buttons[0].set_active(True)
         
         self.notebook.bind("<<NotebookTabChanged>>", self.on_tab_changed)
        
