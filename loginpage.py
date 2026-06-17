@@ -94,17 +94,20 @@ class LoginPage(tk.Tk):
             img.thumbnail((120, 120), Image.Resampling.LANCZOS)
             self.logo_img = ImageTk.PhotoImage(img)
             tk.Label(logo_frame, image=self.logo_img, bg="#EBE7E0").pack()
-        except ImportError:
-            # Fallback to pure Tkinter if Pillow is not installed
-            self.raw_logo_img = tk.PhotoImage(file=logo_path)
-            # Use subsample to try to fit it roughly (optional, relies on raw image size)
-            w, h = self.raw_logo_img.width(), self.raw_logo_img.height()
-            scale = max(1, w // 120)
-            self.logo_img = self.raw_logo_img.subsample(scale, scale)
-            tk.Label(logo_frame, image=self.logo_img, bg="#EBE7E0").pack()
-        except Exception as e:
-            self.logger.error(f"Could not load logo.png: {e}")
-            tk.Label(logo_frame, text="[Logo Image Error]", bg="#EBE7E0", fg="red").pack()
+        except (ImportError, Exception) as e:
+            # If Pillow's ImageTk is missing or initial load fails, try native tk.PhotoImage
+            # We provide a GIF version for maximum compatibility with older/minimal Tkinter
+            try:
+                gif_path = os.path.join(Config.BASE_DIR, "logo.gif")
+                target_path = gif_path if os.path.exists(gif_path) else logo_path
+                self.raw_logo_img = tk.PhotoImage(file=target_path)
+                w, h = self.raw_logo_img.width(), self.raw_logo_img.height()
+                scale = max(1, w // 120)
+                self.logo_img = self.raw_logo_img.subsample(scale, scale)
+                tk.Label(logo_frame, image=self.logo_img, bg="#EBE7E0").pack()
+            except Exception as e2:
+                self.logger.error(f"Could not load logo image: {e2}")
+                tk.Label(logo_frame, text="[Logo Error]", bg="#EBE7E0", fg="red").pack()
 
         logo_label = tk.Label(logo_frame, text="FOCUS PRISM", font=("Segoe UI", 12, "bold"), bg="#EBE7E0", fg="#5A5A5A")
         logo_label.pack()

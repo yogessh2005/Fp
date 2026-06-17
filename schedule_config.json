@@ -1,0 +1,16 @@
+{
+    "triggers": [
+        {
+            "id": "1734567890",
+            "time": "17:00",
+            "recipients": ["email1@example.com", "email2@example.com"],
+            "recipient_names": ["Name1", "Name2"],
+            "company": "SK",
+            "selected_date": "15/06/2026",
+            "enabled": true,
+            "created_at": "2026-06-15 10:30:00",
+            "last_sent": "2026-06-15 17:00:00"
+        }
+    ],
+    "last_sent": null
+}
