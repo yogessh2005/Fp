@@ -45,6 +45,7 @@ class TriggersDialog(tk.Toplevel):
         self.setup_window()
         self.create_ui()
         self.load_triggers()
+        self.update_countdown()
    
     def setup_window(self):
         self.title("⏰ Schedule Triggers - Active/Inactive Management")
@@ -215,7 +216,8 @@ class TriggersDialog(tk.Toplevel):
         active_count = len([t for t in triggers if t.get('enabled', False)])
        
         self.summary_label.config(
-            text=f"📊 Total Triggers: {len(triggers)} | 🟢 Active: {active_count} | 🔴 Inactive: {len(triggers) - active_count}"
+            text=f"📊 Total Triggers: {len(triggers)} | 🟢 Active: {active_count} | 🔴 Inactive: {len(triggers) - active_count}",
+            fg=Config.COLORS["primary"]
         )
        
         if not triggers:
@@ -236,16 +238,29 @@ class TriggersDialog(tk.Toplevel):
             if enabled:
                 status = "🟢 ACTIVE"
                 action_text = "🔴 Deactivate"
+                tag = 'active'
             else:
                 status = "🔴 INACTIVE"
                 action_text = "🟢 Activate"
+                tag = 'inactive'
            
-            item_id = self.tree.insert("", "end", values=(status, time_str, company, recipients, created, last_sent, action_text))
-            self.tree.item(item_id, tags=(trigger_id,))
+            item_id = self.tree.insert("", "end", values=(status, time_str, company, recipients, created, last_sent, action_text), tags=(trigger_id, tag))
            
-            if enabled:
-                self.tree.tag_configure('active', background='#E8F5E9')
-            else:
-                self.tree.tag_configure('inactive', background='#FFEBEE')
+        self.tree.tag_configure('active', background='#E8F5E9')
+        self.tree.tag_configure('inactive', background='#FFEBEE')
+
+    def update_countdown(self):
+        """Optional: Add a countdown to this dialog as well if we want consistency"""
+        try:
+            if not self.winfo_exists():
+                return
+            info = self.email_scheduler.get_next_trigger_info()
+            if info:
+                rem = info['remaining']
+                h, m, s = rem.seconds // 3600, (rem.seconds // 60) % 60, rem.seconds % 60
+                self.title(f"⏰ Triggers - Next in {h:02d}:{m:02d}:{s:02d}")
+            self.after(1000, self.update_countdown)
+        except:
+            pass
 
 

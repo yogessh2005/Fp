@@ -74,27 +74,64 @@ class EmailScheduler:
         try:
             if os.path.exists(Config.SCHEDULE_FILE):
                 with open(Config.SCHEDULE_FILE, 'r') as f:
-                    self.schedule_config = json.load(f)
+                    content = f.read().strip()
+                    if content:
+                        self.schedule_config = json.loads(content)
+                    else:
+                        self.schedule_config = {"triggers": [], "last_sent": None}
             else:
-                self.schedule_config = {
-                    "triggers": [],
-                    "last_sent": None
-                }
+                self.schedule_config = {"triggers": [], "last_sent": None}
+        except json.JSONDecodeError as e:
+            self.logger.error(f"JSON decode error in schedule config: {e}")
+            self.schedule_config = {"triggers": [], "last_sent": None}
+            self.save_schedule_config()
         except Exception as e:
             self.logger.error(f"Failed to load schedule config: {e}")
-            self.schedule_config = {
-                "triggers": [],
-                "last_sent": None
-            }
+            self.schedule_config = {"triggers": [], "last_sent": None}
         self.restore_triggers()
-   
+    
     def save_schedule_config(self):
         try:
+            # Reconstruct triggers list to ensure only serializable data is saved
+            serializable_triggers = []
+            for t in self.schedule_config.get('triggers', []):
+                # Only include standard JSON-safe fields
+                clean_t = {
+                    "id": str(t.get("id")),
+                    "time": str(t.get("time")),
+                    "recipients": list(t.get("recipients", [])),
+                    "recipient_names": list(t.get("recipient_names", [])),
+                    "company": str(t.get("company", "")),
+                    "selected_date": str(t.get("selected_date", "")),
+                    "enabled": bool(t.get("enabled", False)),
+                    "created_at": str(t.get("created_at", "")),
+                    "last_sent": t.get("last_sent") # String or None
+                }
+                serializable_triggers.append(clean_t)
+            
+            clean_config = {
+                "triggers": serializable_triggers,
+                "last_sent": self.schedule_config.get("last_sent")
+            }
+            
             with open(Config.SCHEDULE_FILE, 'w') as f:
-                json.dump(self.schedule_config, f, indent=4)
+                json.dump(clean_config, f, indent=4)
             return True
         except Exception as e:
             self.logger.error(f"Failed to save schedule config: {e}")
+            return False
+    
+    def clear_schedule(self):
+        """Clear all scheduled triggers"""
+        try:
+            schedule.clear()
+            self.active_triggers = []
+            self.schedule_config = {"triggers": [], "last_sent": None}
+            self.save_schedule_config()
+            self.logger.info("All schedule triggers cleared")
+            return True
+        except Exception as e:
+            self.logger.error(f"Failed to clear schedule: {e}")
             return False
    
     def restore_triggers(self):
@@ -184,16 +221,17 @@ class EmailScheduler:
         self.logger.info(f"Added new trigger at {time_str} for {company}")
         return True, f"Trigger added at {time_str}", trigger
    
-    def remove_trigger(self, trigger_id: str) -> bool:
+    def remove_trigger(self, trigger_id: str) -> Tuple[bool, str]:
         triggers = self.schedule_config.get('triggers', [])
         for i, trigger in enumerate(triggers):
             if trigger.get('id') == trigger_id:
+                time_str = trigger.get('time', '')
                 self.active_triggers = [t for t in self.active_triggers if t.get('id') != trigger_id]
                 triggers.pop(i)
                 self.save_schedule_config()
                 self.logger.info(f"Removed trigger {trigger_id}")
-                return True
-        return False
+                return True, f"Successfully removed trigger at {time_str}"
+        return False, "Trigger not found"
    
     def toggle_trigger(self, trigger_id: str) -> Tuple[bool, Dict]:
         triggers = self.schedule_config.get('triggers', [])
@@ -224,6 +262,38 @@ class EmailScheduler:
    
     def get_active_triggers(self) -> List[Dict]:
         return [t for t in self.schedule_config.get('triggers', []) if t.get('enabled', False)]
+
+    def get_next_trigger_info(self) -> Optional[Dict]:
+        """Get information about the next upcoming trigger"""
+        active_triggers = self.get_active_triggers()
+        if not active_triggers:
+            return None
+            
+        now = datetime.now()
+        upcoming = []
+        
+        for trigger in active_triggers:
+            time_str = trigger.get('time', '')
+            try:
+                t_hour, t_min = map(int, time_str.split(':'))
+                target_time = now.replace(hour=t_hour, minute=t_min, second=0, microsecond=0)
+                
+                if target_time <= now:
+                    target_time += timedelta(days=1)
+                
+                upcoming.append({
+                    "trigger": trigger,
+                    "target_time": target_time,
+                    "remaining": target_time - now
+                })
+            except Exception:
+                continue
+        
+        if not upcoming:
+            return None
+            
+        upcoming.sort(key=lambda x: x['remaining'])
+        return upcoming[0]
    
     def send_email_report(self, recipients: List[str], company: str,
                           all_data: Dict, selected_date: str,
@@ -368,10 +438,10 @@ Best regards,
         while self.is_running:
             try:
                 schedule.run_pending()
-                time.sleep(60)
+                time.sleep(1)
             except Exception as e:
                 self.logger.error(f"Scheduler error: {e}")
-                time.sleep(60)
+                time.sleep(1)
    
     def set_data_fetch_function(self, func):
         self._get_data_func = func

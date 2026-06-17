@@ -487,7 +487,36 @@ class MainApp(tk.Toplevel):
         self.main_content = tk.Frame(self, bg=Config.COLORS["light"])
         self.main_content.pack(fill="both", expand=True)
         
-        # --- Custom Sidebar ---
+        # --- Stats Footer ---
+        self.stats_frame = tk.Frame(self.main_content, bg=Config.COLORS["white"], height=100)
+        self.stats_frame.pack(side="bottom", fill="x", padx=25, pady=(0, 15))
+        self.stats_frame.pack_propagate(False)
+        
+        self.stats_labels = {}
+        # Columns: (Icon, Label, Key, Default Color)
+        stats_config = [
+            ("📊", "Total Records", "Total Records", Config.COLORS["primary"]),
+            ("🕒", "Last Updated", "Last Updated", Config.COLORS["primary"]),
+            ("✅", "Status", "Status", Config.COLORS["success"])
+        ]
+        
+        for icon, label, key, default_col in stats_config:
+            col_frame = tk.Frame(self.stats_frame, bg=Config.COLORS["white"])
+            col_frame.pack(side="left", expand=True, fill="both")
+            
+            # Header row (Icon + Text)
+            header_row = tk.Frame(col_frame, bg=Config.COLORS["white"])
+            header_row.pack(pady=(15, 2))
+            
+            tk.Label(header_row, text=f"{icon} {label}", font=("Segoe UI", 10), 
+                     bg=Config.COLORS["white"], fg=Config.COLORS["gray"]).pack()
+            
+            # Value row
+            self.stats_labels[key] = tk.Label(col_frame, text="--", font=("Segoe UI", 16, "bold"), 
+                                              bg=Config.COLORS["white"], fg=default_col)
+            self.stats_labels[key].pack()
+
+        # --- Sidebar ---
         self.sidebar_frame = tk.Frame(self.main_content, bg=Config.COLORS["white"], width=220)
         self.sidebar_frame.pack(side="left", fill="y")
         self.sidebar_frame.pack_propagate(False)
@@ -503,11 +532,13 @@ class MainApp(tk.Toplevel):
         self.content_frame.pack(side="right", fill="both", expand=True)
         
         self.notebook = ttk.Notebook(self.content_frame)
-        self.notebook.pack(fill="both", expand=True, padx=25, pady=(25, 25))
+        self.notebook.pack(fill="both", expand=True, padx=25, pady=(25, 0))
         
         style = ttk.Style()
         style.configure("TNotebook", background=Config.COLORS["light"])
         style.layout("TNotebook.Tab", []) # Hide default tabs completely
+        
+        self.notebook.bind("<<NotebookTabChanged>>", self.on_tab_changed)
         
         from ui_components import SidebarButton
         self.tabs = {}
@@ -530,22 +561,7 @@ class MainApp(tk.Toplevel):
         # Select first tab by default
         if self.tab_buttons:
             self.tab_buttons[0].set_active(True)
-        
-        self.notebook.bind("<<NotebookTabChanged>>", self.on_tab_changed)
-       
-        self.stats_frame = tk.Frame(self.main_content, bg=Config.COLORS["white"], height=100)
-        self.stats_frame.pack(fill="x", padx=25, pady=(0, 25))
-        self.stats_frame.pack_propagate(False)
-       
-        self.stats_labels = {}
-        stats = ["📊 Total Records", "🕐 Last Updated", "✅ Status"]
-        for i, stat in enumerate(stats):
-            frame = tk.Frame(self.stats_frame, bg=Config.COLORS["white"])
-            frame.pack(side="left", expand=True, fill="both", padx=15)
-            tk.Label(frame, text=stat, font=("Segoe UI", 10), bg=Config.COLORS["white"], fg=Config.COLORS["gray"]).pack(pady=(15, 5))
-            self.stats_labels[stat] = tk.Label(frame, text="--", font=("Segoe UI", 14, "bold"), bg=Config.COLORS["white"], fg=Config.COLORS["primary"])
-            self.stats_labels[stat].pack()
-   
+    
     def create_enhanced_tab(self, parent, module_name):
         container = tk.Frame(parent, bg=Config.COLORS["white"])
         container.pack(fill="both", expand=True, padx=5, pady=5)
@@ -771,9 +787,9 @@ class MainApp(tk.Toplevel):
         self.is_loading = False
        
         total_records = sum(len(df) for df in self.all_data.values())
-        self.stats_labels["📊 Total Records"].config(text=f"{total_records:,}")
-        self.stats_labels["🕐 Last Updated"].config(text=datetime.now().strftime("%H:%M:%S"))
-        self.stats_labels["✅ Status"].config(text="Ready", fg=Config.COLORS["success"])
+        self.stats_labels["Total Records"].config(text=f"{total_records:,}")
+        self.stats_labels["Last Updated"].config(text=datetime.now().strftime("%H:%M:%S"))
+        self.stats_labels["Status"].config(text="Ready", fg=Config.COLORS["success"])
        
         current_tab_index = self.notebook.index(self.notebook.select())
         if current_tab_index < len(Config.MODULES):

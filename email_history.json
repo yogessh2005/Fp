@@ -1,0 +1,26 @@
+[
+    {
+        "timestamp": "2026-06-17 16:17:10",
+        "company": "SK",
+        "recipients": [
+            "ofjsldmc@gmail.com"
+        ],
+        "recipient_count": 1,
+        "selected_date": "17/06/2026",
+        "status": "\u2705 SUCCESS",
+        "message": "Sent to 1 recipients",
+        "trigger_time": "16:17"
+    },
+    {
+        "timestamp": "2026-06-17 16:17:05",
+        "company": "EVPL",
+        "recipients": [
+            "yogeshed@gamil.com"
+        ],
+        "recipient_count": 1,
+        "selected_date": "17/06/2026",
+        "status": "\u2705 SUCCESS",
+        "message": "Sent to 1 recipients",
+        "trigger_time": "16:17"
+    }
+]

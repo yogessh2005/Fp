@@ -52,13 +52,16 @@ class ModernButton(tk.Button):
        
         bg_color, hover_color = self.colors.get(variant, self.colors["primary"])
        
+        # If font is passed in kwargs, use it; otherwise use default
+        current_font = kwargs.pop("font", ("Segoe UI", 10, "bold"))
+        
         super().__init__(
             parent,
             text=text,
             command=command,
             bg=bg_color,
             fg=Config.COLORS["white"],
-            font=("Segoe UI", 10, "bold"),
+            font=current_font,
             relief="flat",
             bd=0,
             cursor="hand2",

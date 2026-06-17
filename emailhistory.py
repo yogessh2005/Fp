@@ -1,4 +1,3 @@
-#sdcc
 import tkinter as tk
 from tkinter import ttk, messagebox, font, scrolledtext, filedialog
 import pymssql
