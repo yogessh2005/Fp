@@ -169,3 +169,37 @@
 2026-06-17 15:23:09,590 - INFO - Overall Estimate using next day date: 18062026 (selected was 17062026)
 2026-06-17 15:23:09,772 - INFO - Sessionwise Estimate using next day date: 18062026 (selected was 17062026)
 2026-06-17 15:23:25,858 - INFO - Email scheduler cleaned up
+2026-06-17 15:48:29,779 - INFO - Application started - Login page initialized
+2026-06-17 15:49:02,476 - INFO - User logged in: sk_admin
+2026-06-17 15:49:02,514 - INFO - Created temp directory: c:\Users\srini\Downloads\app_code\temp
+2026-06-17 15:49:02,568 - INFO - Trigger scheduled at 17:00
+2026-06-17 15:49:02,706 - INFO - Email scheduler running in background
+2026-06-17 15:49:02,712 - INFO - Scheduler thread started
+2026-06-17 15:49:03,322 - INFO - Main application opened for SK
+2026-06-17 15:49:04,033 - INFO - Connected to database: SK
+2026-06-17 15:49:05,073 - INFO - Overall Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 15:49:05,202 - INFO - Sessionwise Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 15:59:25,272 - INFO - Closed connection to SK
+2026-06-17 15:59:27,273 - INFO - Email scheduler cleaned up
+2026-06-17 15:59:36,784 - INFO - Application started - Login page initialized
+2026-06-17 15:59:49,756 - INFO - User logged in: sk_admin
+2026-06-17 15:59:49,798 - INFO - Trigger scheduled at 17:00
+2026-06-17 15:59:49,861 - INFO - Email scheduler running in background
+2026-06-17 15:59:49,863 - INFO - Scheduler thread started
+2026-06-17 15:59:50,367 - INFO - Main application opened for SK
+2026-06-17 15:59:51,698 - INFO - Connected to database: SK
+2026-06-17 15:59:52,409 - INFO - Overall Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 15:59:52,849 - INFO - Sessionwise Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 16:00:41,389 - INFO - User logged out from SK
+2026-06-17 16:28:22,130 - INFO - Closed connection to SK
+2026-06-17 16:28:24,145 - INFO - Email scheduler cleaned up
+2026-06-17 17:04:29,167 - INFO - Application started - Login page initialized
+2026-06-17 17:04:43,363 - INFO - User logged in: sk_admin
+2026-06-17 17:04:43,387 - INFO - Trigger scheduled at 17:00
+2026-06-17 17:04:43,391 - INFO - Email scheduler running in background
+2026-06-17 17:04:43,393 - INFO - Scheduler thread started
+2026-06-17 17:04:43,944 - INFO - Main application opened for SK
+2026-06-17 17:04:44,559 - INFO - Connected to database: SK
+2026-06-17 17:04:45,339 - INFO - Overall Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 17:04:45,480 - INFO - Sessionwise Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-17 17:05:35,362 - INFO - Email scheduler cleaned up

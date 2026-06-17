@@ -69,7 +69,8 @@ class EnhancedTable(ttk.Frame):
         self.tree_frame.grid_columnconfigure(0, weight=1)
        
         self.tree.bind("<ButtonRelease-1>", self.on_row_select)
-       
+        self.tree.bind("<Button-1>", self.on_header_click)
+        
         style = ttk.Style()
         style.configure("Enhanced.Treeview",
             font=("Segoe UI", 10),
@@ -142,7 +143,20 @@ class EnhancedTable(ttk.Frame):
         self.tree["columns"] = columns
        
         for col in columns:
-            self.tree.heading(col, text=col)
+            is_numeric = False
+            if not self.data.empty:
+                non_nulls = self.data[col].dropna()
+                if len(non_nulls) > 0:
+                    converted = pd.to_numeric(non_nulls, errors='coerce')
+                    if converted.notna().sum() == len(non_nulls):
+                        is_numeric = True
+            
+            if is_numeric:
+                header_text = col + " ▼"
+            else:
+                header_text = col
+                
+            self.tree.heading(col, text=header_text)
             self.tree.column(col, anchor="center", minwidth=100)
        
         for idx, (_, row) in enumerate(self.filtered_data.iterrows()):
@@ -163,7 +177,7 @@ class EnhancedTable(ttk.Frame):
    
     def auto_adjust_columns(self):
         for col in self.tree["columns"]:
-            max_width = len(str(col)) * 12
+            max_width = len(str(col)) * 12 + 20
             for idx, item in enumerate(self.tree.get_children()):
                 if idx > 100:
                     break
@@ -176,17 +190,94 @@ class EnhancedTable(ttk.Frame):
             final_width = min(max_width + 30, 350)
             final_width = max(final_width, 100)
             self.tree.column(col, width=final_width)
-   
-    def apply_advanced_filters(self, filters):
-        self.filtered_data = self.data.copy()
+            
+    def on_header_click(self, event):
+        region = self.tree.identify_region(event.x, event.y)
+        if region == "heading":
+            col_id = self.tree.identify_column(event.x)
+            if col_id:
+                col_idx = int(col_id.replace('#', '')) - 1
+                col_name = self.tree["columns"][col_idx]
+                
+                is_numeric = False
+                if not self.data.empty:
+                    non_nulls = self.data[col_name].dropna()
+                    if len(non_nulls) > 0:
+                        converted = pd.to_numeric(non_nulls, errors='coerce')
+                        if converted.notna().sum() == len(non_nulls):
+                            is_numeric = True
+                
+                if is_numeric:
+                    self.open_column_filter(col_name, event.x_root, event.y_root)
+
+    def open_column_filter(self, col_name, x, y):
+        from advancedfilterdialog import ColumnFilterDialog
+        existing = self.column_filters.get(col_name, None)
+        ColumnFilterDialog(self, col_name, x, y, self.apply_column_filter, self.clear_column_filter, existing)
+
+    def apply_column_filter(self, col_name, filter_data):
+        self.column_filters[col_name] = filter_data
+        self.apply_all_filters()
+        
+    def clear_column_filter(self, col_name):
+        if col_name in self.column_filters:
+            del self.column_filters[col_name]
+            self.apply_all_filters()
+            
+    def _apply_condition(self, df, col, op, val):
+        if not op:
+            return pd.Series(True, index=df.index)
+            
+        op = op.lower()
+        if "null" in op:
+            if op == "is null":
+                return df[col].isna() | (df[col] == "") | (df[col] == "nan") | (df[col] == "None")
+            else:
+                return df[col].notna() & (df[col] != "") & (df[col] != "nan") & (df[col] != "None")
+                
+        try:
+            # Try numeric comparison first
+            numeric_col = pd.to_numeric(df[col], errors='coerce')
+            numeric_val = float(val)
+            
+            if op == "is equal to": return numeric_col == numeric_val
+            elif op == "is not equal to": return numeric_col != numeric_val
+            elif op == "is greater than": return numeric_col > numeric_val
+            elif op == "is greater than or equal to": return numeric_col >= numeric_val
+            elif op == "is less than": return numeric_col < numeric_val
+            elif op == "is less than or equal to": return numeric_col <= numeric_val
+        except:
+            # Fallback to string comparison
+            str_col = df[col].astype(str).str.lower()
+            val = str(val).lower()
+            
+            if op == "is equal to": return str_col == val
+            elif op == "is not equal to": return str_col != val
+            elif op == "is greater than": return str_col > val
+            elif op == "is greater than or equal to": return str_col >= val
+            elif op == "is less than": return str_col < val
+            elif op == "is less than or equal to": return str_col <= val
+            
+        return pd.Series(True, index=df.index)
+
+    def apply_all_filters(self):
         display_df = self.data.copy()
-       
-        for col, filter_value in filters.items():
-            if col in display_df.columns and filter_value:
-                display_df = display_df[
-                    display_df[col].astype(str).str.lower().str.contains(filter_value.lower(), na=False)
-                ]
-       
+        
+        for col, f in self.column_filters.items():
+            if col not in display_df.columns:
+                continue
+                
+            mask1 = self._apply_condition(display_df, col, f.get("op1"), f.get("val1"))
+            
+            if "op2" in f and f.get("op2"):
+                mask2 = self._apply_condition(display_df, col, f.get("op2"), f.get("val2"))
+                if f.get("logic") == "And":
+                    display_df = display_df[mask1 & mask2]
+                else:
+                    display_df = display_df[mask1 | mask2]
+            else:
+                display_df = display_df[mask1]
+                
         self.filtered_data = display_df
         self.refresh_display()
    
