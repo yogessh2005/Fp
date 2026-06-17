@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 from config import Config
 from emailhistorydialog import EmailHistoryDialog
 from emailscheduler import EmailScheduler
-from schedule_triggers_dialog import TriggersDialog
+from schedule_triggers_dialog import ScheduleTriggersDialog
 from ui_components import ModernButton
 
 # ==================== SCHEDULE EMAIL DIALOG ====================
@@ -253,9 +253,7 @@ class ScheduleEmailDialog(tk.Toplevel):
         return selected
    
     def show_triggers(self):
-        win = TriggersDialog(self, self.email_scheduler)
-        self.wait_window(win)
-        self.load_schedule_status()
+        TriggersDialog(self, self.email_scheduler)
    
     def show_history(self):
         EmailHistoryDialog(self, self.email_scheduler)

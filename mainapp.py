@@ -28,11 +28,12 @@ from openpyxl.utils import get_column_letter
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
-from advancedfilterdialog import AdvancedFilterDialog
 from applogger import AppLogger
 from config import Config
 from databasehandler import DatabaseHandler
 from emailscheduler import EmailScheduler
+from emailhistorydialog import EmailHistoryDialog
+from schedule_triggers_dialog import ScheduleTriggersDialog
 from enhanced_table import EnhancedTable
 from excelformatter import ExcelFormatter
 from grntargetmanager import GRNTargetManager
@@ -355,80 +356,100 @@ class MainApp(tk.Toplevel):
                               bg=Config.COLORS["primary"], fg="white", relief="flat",
                               command=lambda: change_month(1), cursor="hand2", padx=15)
         btn_right.pack(side="right", padx=20, pady=15)
-       
+        
         day_header_frame = tk.Frame(main_container, bg=Config.COLORS["white"])
         day_header_frame.pack(fill="x", pady=(10, 5))
-       
-        day_names = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-        day_colors = [
-            Config.COLORS["secondary"], Config.COLORS["secondary"], Config.COLORS["secondary"],
-            Config.COLORS["secondary"], Config.COLORS["secondary"], Config.COLORS["warning"], Config.COLORS["danger"]
-        ]
-       
-        for col, (day, color) in enumerate(zip(day_names, day_colors)):
+        
+        cal.setfirstweekday(cal.SUNDAY)
+        day_names = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
+        
+        for col, day in enumerate(day_names):
             tk.Label(day_header_frame, text=day, font=("Segoe UI", 11, "bold"),
-                     bg=Config.COLORS["white"], fg=color, width=8, pady=8).grid(row=0, column=col, padx=2, pady=2)
-       
+                     bg=Config.COLORS["white"], fg=Config.COLORS["dark"], width=8, pady=8).grid(row=0, column=col, padx=2, pady=2)
+        
         calendar_frame = tk.Frame(main_container, bg=Config.COLORS["white"])
-        calendar_frame.pack(fill="both", expand=True, pady=10)
-       
+        calendar_frame.pack(fill="both", expand=True, pady=5)
+        
         date_cells = []
         for row in range(6):
             row_cells = []
             for col in range(7):
-                cell_frame = tk.Frame(calendar_frame, bg=Config.COLORS["light"],
-                                      relief="solid", bd=1, width=55, height=50)
-                cell_frame.grid(row=row, column=col, padx=2, pady=2)
+                cell_frame = tk.Frame(calendar_frame, bg=Config.COLORS["white"], width=45, height=40)
+                cell_frame.grid(row=row, column=col, padx=5, pady=5)
+                cell_frame.pack_propagate(False)
                 cell_frame.grid_propagate(False)
+                
                 cell_label = tk.Label(cell_frame, text="", font=("Segoe UI", 11),
-                                      bg=Config.COLORS["light"], fg=Config.COLORS["dark"])
+                                      bg=Config.COLORS["white"], fg=Config.COLORS["dark"])
                 cell_label.pack(expand=True, fill="both")
                 row_cells.append((cell_frame, cell_label))
             date_cells.append(row_cells)
-       
+        
         selected_date_label = tk.Label(main_container, text="", font=("Segoe UI", 11),
-                                        bg=Config.COLORS["white"], fg=Config.COLORS["success"])
-        selected_date_label.pack(pady=(10, 5))
-       
+                                        bg=Config.COLORS["white"], fg=Config.COLORS["primary"])
+        selected_date_label.pack(pady=(5, 5))
+        
         def update_calendar():
             self.month_label.config(text=f"{cal.month_name[current_month]} {current_year}")
             month_cal = cal.monthcalendar(current_year, current_month)
-           
+            
+            # Pad the beginning with previous month's days
+            flat_cal = []
+            if current_month == 1:
+                prev_month = 12
+                prev_year = current_year - 1
+            else:
+                prev_month = current_month - 1
+                prev_year = current_year
+            
+            _, prev_days = cal.monthrange(prev_year, prev_month)
+            first_week = month_cal[0]
+            prev_month_padding = first_week.count(0)
+            
+            for i in range(prev_month_padding):
+                flat_cal.append((prev_days - prev_month_padding + i + 1, "prev"))
+                
+            for week in month_cal:
+                for day in week:
+                    if day != 0:
+                        flat_cal.append((day, "current"))
+                        
+            # Pad the end with next month's days
+            next_day = 1
+            while len(flat_cal) < 42:
+                flat_cal.append((next_day, "next"))
+                next_day += 1
+            
+            idx = 0
             for row in range(6):
                 for col in range(7):
-                    date_cells[row][col][1].config(text="", bg=Config.COLORS["light"], fg=Config.COLORS["dark"])
-                    date_cells[row][col][0].config(bg=Config.COLORS["light"])
-           
-            for row in range(len(month_cal)):
-                for col in range(7):
-                    day = month_cal[row][col]
-                    if day != 0:
+                    day, month_type = flat_cal[idx]
+                    idx += 1
+                    
+                    cell_frame, cell_label = date_cells[row][col]
+                    cell_label.config(text=str(day))
+                    
+                    if month_type == "current":
                         date_obj = datetime(current_year, current_month, day)
-                        cell_frame, cell_label = date_cells[row][col]
-                        cell_label.config(text=str(day))
-                       
-                        weekday = date_obj.weekday()
-                        is_weekend = weekday >= 5
-                       
                         if temp_selected_date and date_obj.date() == temp_selected_date.date():
-                            cell_frame.config(bg=Config.COLORS["success"])
-                            cell_label.config(bg=Config.COLORS["success"], fg="white", font=("Segoe UI", 11, "bold"))
+                            cell_frame.config(bg=Config.COLORS["primary"])
+                            cell_label.config(bg=Config.COLORS["primary"], fg=Config.COLORS["white"], font=("Segoe UI", 11, "bold"))
                         elif date_obj.date() == datetime.now().date():
-                            cell_frame.config(bg=Config.COLORS["info"])
-                            cell_label.config(bg=Config.COLORS["info"], fg="white", font=("Segoe UI", 11, "bold"))
-                        elif is_weekend:
-                            if weekday == 5:
-                                cell_frame.config(bg=Config.COLORS["warning"])
-                                cell_label.config(bg=Config.COLORS["warning"], fg="white")
-                            else:
-                                cell_frame.config(bg=Config.COLORS["danger"])
-                                cell_label.config(bg=Config.COLORS["danger"], fg="white")
-                        else:
                             cell_frame.config(bg=Config.COLORS["light"])
-                            cell_label.config(bg=Config.COLORS["light"], fg=Config.COLORS["dark"])
-                       
+                            cell_label.config(bg=Config.COLORS["light"], fg=Config.COLORS["primary"], font=("Segoe UI", 11, "bold"))
+                        else:
+                            cell_frame.config(bg=Config.COLORS["white"])
+                            cell_label.config(bg=Config.COLORS["white"], fg=Config.COLORS["dark"], font=("Segoe UI", 11))
+                        
                         cell_frame.bind("<Button-1>", lambda e, d=date_obj: select_date(d))
                         cell_label.bind("<Button-1>", lambda e, d=date_obj: select_date(d))
+                        cell_label.config(cursor="hand2")
+                    else:
+                        cell_frame.config(bg=Config.COLORS["white"])
+                        cell_label.config(bg=Config.COLORS["white"], fg=Config.COLORS["gray"], font=("Segoe UI", 11))
+                        cell_frame.unbind("<Button-1>")
+                        cell_label.unbind("<Button-1>")
+                        cell_label.config(cursor="")
        
         def select_date(date):
             nonlocal temp_selected_date
@@ -572,9 +593,7 @@ class MainApp(tk.Toplevel):
         left_button_frame = tk.Frame(button_frame, bg=Config.COLORS["white"])
         left_button_frame.pack(side="left")
        
-        filter_btn = ModernButton(left_button_frame, text="🔧 Advanced Filters",
-                                   command=lambda: self.show_advanced_filters(module_name), variant="primary", width=15)
-        filter_btn.pack(side="left", padx=5)
+        # Advanced filter button removed (now via headers)
        
         clear_filter_btn = ModernButton(left_button_frame, text="✗ Clear Filters",
                                          command=lambda: self.clear_filters(module_name), variant="warning", width=12)
@@ -608,20 +627,6 @@ class MainApp(tk.Toplevel):
        
         rule = rules.get(module_name, f"ℹ️ {module_name} shows data for the SELECTED DATE only")
         messagebox.showinfo(f"📌 {module_name}", rule)
-   
-    def show_advanced_filters(self, module_name):
-        if module_name in self.tabs:
-            table = self.tabs[module_name]['table']
-            if table.filtered_data is not None and not table.filtered_data.empty:
-                columns = list(table.filtered_data.columns)
-                AdvancedFilterDialog(self, columns,
-                    lambda filters: self.apply_advanced_filters(module_name, filters),
-                    lambda: self.clear_filters(module_name))
-   
-    def apply_advanced_filters(self, module_name, filters):
-        if module_name in self.tabs:
-            self.tabs[module_name]['table'].apply_advanced_filters(filters)
-            self.update_status(f"Applied filters to {module_name}")
    
     def clear_filters(self, module_name):
         if module_name in self.tabs:

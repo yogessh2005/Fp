@@ -34,7 +34,7 @@ from ui_components import ModernButton
 
 # ==================== SCHEDULE TRIGGERS DIALOG ====================
 
-class TriggersDialog(tk.Toplevel):
+class ScheduleTriggersDialog(tk.Toplevel):
     """Display all schedule triggers with Active/Inactive toggle"""
    
     def __init__(self, parent, email_scheduler: EmailScheduler):
