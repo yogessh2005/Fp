@@ -40,7 +40,7 @@ class AppLogger:
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler(Config.LOG_FILE),
+                logging.FileHandler(Config.LOG_FILE, encoding='utf-8'),
                 logging.StreamHandler()
             ]
         )

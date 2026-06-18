@@ -1,0 +1,26 @@
+[
+    {
+        "timestamp": "2026-06-18 12:38:18",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 12:08:08",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 12:03:58",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    }
+]

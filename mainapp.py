@@ -485,8 +485,14 @@ class MainApp(tk.Toplevel):
    
     def refresh_current_tab_data(self):
         current_tab_index = self.notebook.index(self.notebook.select())
-        if current_tab_index < len(Config.MODULES):
-            module_name = Config.MODULES[current_tab_index]['name']
+        if current_tab_index == 0:
+            if "Dashboard" in self.tabs:
+                self.tabs["Dashboard"].refresh_data()
+            return
+            
+        module_index = current_tab_index - 1
+        if module_index >= 0 and module_index < len(Config.MODULES):
+            module_name = Config.MODULES[module_index]['name']
            
             if module_name in self.tabs:
                 tab_data = self.tabs[module_name]
@@ -533,6 +539,23 @@ class MainApp(tk.Toplevel):
         from ui_components import SidebarButton
         self.tabs = {}
         self.tab_buttons = []
+        
+        # --- Dashboard Tab (Real-Time) ---
+        from dashboard import DashboardTab
+        dash_frame = tk.Frame(self.notebook, bg=Config.COLORS["white"])
+        self.notebook.add(dash_frame, text="Dashboard")
+        
+        dash_btn = SidebarButton(
+            self.sidebar_frame,
+            text=f"  📈   Dashboard",
+            command=lambda: self.select_tab(0)
+        )
+        dash_btn.pack(fill="x", pady=2)
+        self.tab_buttons.append(dash_btn)
+        self.tabs["Dashboard"] = DashboardTab(dash_frame, self.company, self.db_handler, self.logger)
+        self.tabs["Dashboard"].pack(fill="both", expand=True)
+        
+        # --- Other Modules ---
         for i, module in enumerate(Config.MODULES):
             tab_frame = tk.Frame(self.notebook, bg=Config.COLORS["white"])
             self.notebook.add(tab_frame, text=module['name'])
@@ -540,7 +563,7 @@ class MainApp(tk.Toplevel):
             btn = SidebarButton(
                 self.sidebar_frame,
                 text=f"  {module['icon']}   {module['name']}",
-                command=lambda idx=i: self.select_tab(idx)
+                command=lambda idx=i+1: self.select_tab(idx)
             )
             btn.pack(fill="x", pady=2)
             self.tab_buttons.append(btn)
@@ -667,8 +690,13 @@ class MainApp(tk.Toplevel):
         
     def on_tab_changed(self, event):
         current_tab_index = self.notebook.index(self.notebook.select())
-        if current_tab_index < len(Config.MODULES):
-            module_name = Config.MODULES[current_tab_index]['name']
+        if current_tab_index == 0:
+            self.update_status("Viewing Dashboard module - Showing Real-Time data")
+            return
+            
+        module_index = current_tab_index - 1
+        if module_index >= 0 and module_index < len(Config.MODULES):
+            module_name = Config.MODULES[module_index]['name']
            
             if module_name in ["Overall Estimate", "Sessionwise Estimate"]:
                 self.update_status(f"Viewing {module_name} module - Showing NEXT DAY data")
@@ -759,8 +787,12 @@ class MainApp(tk.Toplevel):
         self.progress_bar['value'] = progress
         self.progress_label.config(text=f"{loaded_count}/5 Loaded")
        
+        self.on_module_loaded(module_name, data)
+
+    def on_module_loaded(self, module_name, data):
         current_tab_index = self.notebook.index(self.notebook.select())
-        current_module = Config.MODULES[current_tab_index]['name'] if current_tab_index < len(Config.MODULES) else None
+        module_index = current_tab_index - 1
+        current_module = Config.MODULES[module_index]['name'] if module_index >= 0 and module_index < len(Config.MODULES) else None
        
         if module_name == current_module:
             self.display_data_in_tab(module_name, data)
@@ -781,10 +813,13 @@ class MainApp(tk.Toplevel):
         self.stats_labels["✅ Status"].config(text="Ready", fg=Config.COLORS["success"])
        
         current_tab_index = self.notebook.index(self.notebook.select())
-        if current_tab_index < len(Config.MODULES):
-            module_name = Config.MODULES[current_tab_index]['name']
+        module_index = current_tab_index - 1
+        if module_index >= 0 and module_index < len(Config.MODULES):
+            module_name = Config.MODULES[module_index]['name']
             if module_name in self.all_data:
                 self.display_data_in_tab(module_name, self.all_data[module_name])
+        elif current_tab_index == 0 and "Dashboard" in self.tabs:
+            self.tabs["Dashboard"].refresh_data()
        
         self.update_schedule_indicator()
    
@@ -799,6 +834,8 @@ class MainApp(tk.Toplevel):
         if not self.is_loading:
             self.all_data.clear()
             self.load_all_modules()
+            if "Dashboard" in self.tabs:
+                self.tabs["Dashboard"].refresh_data()
    
     def export_to_excel(self):
         if not self.all_data:

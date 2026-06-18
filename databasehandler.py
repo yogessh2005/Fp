@@ -40,6 +40,7 @@ class DatabaseHandler:
         self.logger = logger
         self.connection_pool = {}
         self.query_cache = {}
+        self.lock = threading.Lock()
    
     def test_connection(self, database: str = None) -> Tuple[bool, str]:
         try:
@@ -86,8 +87,9 @@ class DatabaseHandler:
             return self.query_cache[cache_key].copy()
        
         try:
-            conn = self.get_connection(database)
-            df = pd.read_sql_query(sql, conn).fillna("")
+            with self.lock:
+                conn = self.get_connection(database)
+                df = pd.read_sql_query(sql, conn).fillna("")
            
             if use_cache:
                 self.query_cache[cache_key] = df.copy()

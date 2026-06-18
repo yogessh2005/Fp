@@ -1,0 +1,34 @@
+[
+    {
+        "id": "20260618123820345035",
+        "timestamp": "2026-06-18 12:38:20",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618120809974105",
+        "timestamp": "2026-06-18 12:08:09",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618120359936640",
+        "timestamp": "2026-06-18 12:03:59",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618115315794834",
+        "timestamp": "2026-06-18 11:53:15",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    }
+]
