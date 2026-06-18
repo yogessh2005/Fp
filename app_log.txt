@@ -3527,3 +3527,700 @@ ORDER BY PPu.ProductionUnitName, C.OutletName, C.SessionId': (0, b'Unknown error
 2026-06-18 12:39:17,857 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2026-06-18 12:39:17,859 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2026-06-18 12:53:47,015 - INFO - Email scheduler cleaned up
+2026-06-18 13:01:46,910 - INFO - Application started - Login page initialized
+2026-06-18 13:01:57,210 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 13:01:57,243 - INFO - Trigger scheduled at 17:00
+2026-06-18 13:01:57,245 - INFO - Email scheduler running in background
+2026-06-18 13:01:57,245 - INFO - Scheduler thread started
+2026-06-18 13:01:58,405 - INFO - Main application opened for SK
+2026-06-18 13:01:58,624 - INFO - Connected to database: SK
+2026-06-18 13:01:59,411 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:01:59,638 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:01:59,713 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:01:59,714 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:01:59,909 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:01:59,910 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:02:00,826 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:02:00,830 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:02:00,974 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:02:00,975 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:02:04,893 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:02:04,895 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:02:05,039 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:02:05,040 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:02:05,208 - INFO - Overall Estimate using next day date: 03062026 (selected was 02062026)
+2026-06-18 13:02:05,363 - INFO - Sessionwise Estimate using next day date: 03062026 (selected was 02062026)
+2026-06-18 13:02:06,379 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:02:06,381 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:02:06,514 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:02:06,515 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:02:12,140 - ERROR - Export failed: At least one sheet must be visible
+2026-06-18 13:02:17,911 - ERROR - Failed to merge lookup data: type object 'Config' has no attribute 'LOOKUP_SHEETS'
+2026-06-18 13:07:29,973 - INFO - Application started - Login page initialized
+2026-06-18 13:07:49,496 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 13:07:49,529 - INFO - Trigger scheduled at 17:00
+2026-06-18 13:07:49,575 - INFO - Email scheduler running in background
+2026-06-18 13:07:49,576 - INFO - Scheduler thread started
+2026-06-18 13:07:50,885 - INFO - Main application opened for SK
+2026-06-18 13:07:51,211 - INFO - Connected to database: SK
+2026-06-18 13:07:53,997 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:07:54,207 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:07:54,209 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:07:54,365 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:07:54,366 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:07:54,546 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:07:55,319 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:07:55,321 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:07:55,460 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:07:55,461 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:08:02,225 - INFO - Overall Estimate using next day date: 03062026 (selected was 02062026)
+2026-06-18 13:08:02,439 - INFO - Sessionwise Estimate using next day date: 03062026 (selected was 02062026)
+2026-06-18 13:08:02,742 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:08:02,743 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:08:02,881 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:08:02,883 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:08:03,969 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:08:03,971 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:08:04,107 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:08:04,108 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:08:04,621 - ERROR - Failed to merge manager lookup: type object 'Config' has no attribute 'LOOKUP_SHEETS'
+2026-06-18 13:11:37,560 - INFO - Application started - Login page initialized
+2026-06-18 13:11:52,245 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 13:11:52,287 - INFO - Trigger scheduled at 17:00
+2026-06-18 13:11:52,319 - INFO - Email scheduler running in background
+2026-06-18 13:11:52,321 - INFO - Scheduler thread started
+2026-06-18 13:11:53,500 - INFO - Main application opened for SK
+2026-06-18 13:11:53,711 - INFO - Connected to database: SK
+2026-06-18 13:11:54,436 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:11:54,610 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:11:54,853 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:11:54,855 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:11:55,025 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:11:55,026 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:11:55,726 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:11:55,728 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:11:55,867 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:11:55,868 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:11:59,156 - INFO - Overall Estimate using next day date: 03062026 (selected was 02062026)
+2026-06-18 13:11:59,463 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:11:59,466 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:11:59,601 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:11:59,602 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:11:59,787 - INFO - Sessionwise Estimate using next day date: 03062026 (selected was 02062026)
+2026-06-18 13:12:00,738 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:12:00,739 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:12:00,888 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:12:00,889 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:12:03,982 - ERROR - Failed to merge manager lookup: type object 'Config' has no attribute 'LOOKUP_SHEETS'
+2026-06-18 13:15:13,788 - INFO - Application started - Login page initialized
+2026-06-18 13:15:24,924 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 13:15:24,970 - INFO - Trigger scheduled at 17:00
+2026-06-18 13:15:24,979 - INFO - Email scheduler running in background
+2026-06-18 13:15:24,979 - INFO - Scheduler thread started
+2026-06-18 13:15:26,218 - INFO - Main application opened for SK
+2026-06-18 13:15:26,440 - INFO - Connected to database: SK
+2026-06-18 13:15:27,114 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:15:27,286 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:15:27,551 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:27,554 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:27,745 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:27,745 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:28,543 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:28,545 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:28,693 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:28,694 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:31,375 - INFO - Overall Estimate using next day date: 03062026 (selected was 02062026)
+2026-06-18 13:15:31,463 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:31,465 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:31,597 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:31,598 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:31,773 - INFO - Sessionwise Estimate using next day date: 03062026 (selected was 02062026)
+2026-06-18 13:15:32,617 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:32,618 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:32,753 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:32,754 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:15:33,257 - ERROR - Failed to merge manager lookup: type object 'Config' has no attribute 'LOOKUP_SHEETS'
+2026-06-18 13:23:05,307 - INFO - Closed connection to SK
+2026-06-18 13:23:07,312 - INFO - Email scheduler cleaned up
+2026-06-18 13:23:17,455 - INFO - Application started - Login page initialized
+2026-06-18 13:23:30,353 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 13:23:30,386 - INFO - Trigger scheduled at 17:00
+2026-06-18 13:23:30,396 - INFO - Email scheduler running in background
+2026-06-18 13:23:30,396 - INFO - Scheduler thread started
+2026-06-18 13:23:31,820 - INFO - Main application opened for SK
+2026-06-18 13:23:32,612 - INFO - Connected to database: SK
+2026-06-18 13:23:33,214 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:23:33,499 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:23:33,846 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:23:33,849 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:23:34,051 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:23:34,052 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:23:34,871 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:23:34,873 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:23:35,010 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:23:35,011 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:25:53,387 - INFO - Application started - Login page initialized
+2026-06-18 13:26:04,822 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 13:26:04,873 - INFO - Trigger scheduled at 17:00
+2026-06-18 13:26:04,874 - INFO - Email scheduler running in background
+2026-06-18 13:26:04,874 - INFO - Scheduler thread started
+2026-06-18 13:26:06,275 - INFO - Main application opened for SK
+2026-06-18 13:26:06,672 - INFO - Connected to database: SK
+2026-06-18 13:26:07,427 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:26:07,616 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:26:07,943 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:26:07,946 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:26:08,167 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:26:08,169 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:26:08,844 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:26:08,846 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:26:08,983 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:26:08,984 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:28:37,858 - INFO - Application started - Login page initialized
+2026-06-18 13:28:46,798 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 13:28:46,826 - INFO - Trigger scheduled at 17:00
+2026-06-18 13:28:46,903 - INFO - Email scheduler running in background
+2026-06-18 13:28:46,903 - INFO - Scheduler thread started
+2026-06-18 13:28:48,129 - INFO - Main application opened for SK
+2026-06-18 13:28:48,408 - INFO - Connected to database: SK
+2026-06-18 13:28:49,025 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:28:49,185 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:28:49,327 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:28:49,331 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:28:49,507 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:28:49,509 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:28:50,258 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:28:50,260 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:28:50,401 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:28:50,402 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:33:59,284 - INFO - Application started - Login page initialized
+2026-06-18 13:34:09,316 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 13:34:09,356 - INFO - Trigger scheduled at 17:00
+2026-06-18 13:34:09,401 - INFO - Email scheduler running in background
+2026-06-18 13:34:09,401 - INFO - Scheduler thread started
+2026-06-18 13:34:10,470 - INFO - Main application opened for SK
+2026-06-18 13:34:10,812 - INFO - Connected to database: SK
+2026-06-18 13:34:11,476 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:34:11,697 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:34:12,005 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:34:12,008 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:34:12,221 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:34:12,222 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:34:13,034 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:34:13,036 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:34:13,183 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:34:13,184 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:36:49,487 - INFO - Application started - Login page initialized
+2026-06-18 13:37:14,982 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 13:37:15,027 - INFO - Trigger scheduled at 17:00
+2026-06-18 13:37:15,030 - INFO - Email scheduler running in background
+2026-06-18 13:37:15,031 - INFO - Scheduler thread started
+2026-06-18 13:37:16,380 - INFO - Main application opened for SK
+2026-06-18 13:37:16,590 - INFO - Connected to database: SK
+2026-06-18 13:37:17,325 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:37:17,539 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 13:37:17,890 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:37:17,893 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:37:18,071 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:37:18,072 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:37:18,715 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:37:18,718 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:37:18,870 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 13:37:18,871 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:15:05,296 - INFO - Application started - Login page initialized
+2026-06-18 15:15:36,019 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 15:15:36,093 - INFO - Trigger scheduled at 17:00
+2026-06-18 15:15:36,156 - INFO - Email scheduler running in background
+2026-06-18 15:15:36,157 - INFO - Scheduler thread started
+2026-06-18 15:15:37,572 - INFO - Main application opened for SK
+2026-06-18 15:15:38,335 - INFO - Connected to database: SK
+2026-06-18 15:15:38,995 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:15:39,155 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:15:39,157 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:15:39,335 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:15:39,338 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:15:39,535 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:15:40,157 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:15:40,159 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:15:40,307 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:15:40,309 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:18:16,597 - INFO - Application started - Login page initialized
+2026-06-18 15:18:36,376 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 15:18:36,423 - INFO - Trigger scheduled at 17:00
+2026-06-18 15:18:36,426 - INFO - Email scheduler running in background
+2026-06-18 15:18:36,426 - INFO - Scheduler thread started
+2026-06-18 15:18:37,995 - INFO - Main application opened for SK
+2026-06-18 15:18:38,210 - INFO - Connected to database: SK
+2026-06-18 15:18:38,937 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:18:39,142 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:18:39,145 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:18:39,347 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:18:39,348 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:18:39,537 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:18:40,240 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:18:40,243 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:18:40,403 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:18:40,404 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:23:22,068 - INFO - GRN Target loaded: 4.0
+2026-06-18 15:23:25,429 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:23:25,432 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:23:25,586 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:23:25,588 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:23:25,776 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:23:25,914 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:23:41,822 - INFO - Overall Estimate using next day date: 11062026 (selected was 10062026)
+2026-06-18 15:23:42,067 - INFO - Overall Estimate using next day date: 11062026 (selected was 10062026)
+2026-06-18 15:23:42,278 - INFO - Sessionwise Estimate using next day date: 11062026 (selected was 10062026)
+2026-06-18 15:23:49,807 - INFO - Overall Estimate using next day date: 11062026 (selected was 10062026)
+2026-06-18 15:23:50,004 - INFO - Sessionwise Estimate using next day date: 11062026 (selected was 10062026)
+2026-06-18 15:23:50,081 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:23:50,084 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:23:50,376 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:23:50,377 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:30:27,618 - INFO - Application started - Login page initialized
+2026-06-18 15:30:41,479 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 15:30:41,537 - INFO - Trigger scheduled at 17:00
+2026-06-18 15:30:41,540 - INFO - Email scheduler running in background
+2026-06-18 15:30:41,541 - INFO - Scheduler thread started
+2026-06-18 15:30:42,989 - INFO - Main application opened for SK
+2026-06-18 15:30:43,094 - INFO - Connected to database: SK
+2026-06-18 15:30:44,076 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:30:44,150 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:30:44,153 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:30:44,334 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:30:44,336 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:30:44,518 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:30:45,139 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:30:45,142 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:30:45,292 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:30:45,293 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:34:29,633 - INFO - Email scheduler cleaned up
+2026-06-18 15:35:06,400 - INFO - Application started - Login page initialized
+2026-06-18 15:35:16,078 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 15:35:16,099 - INFO - Trigger scheduled at 17:00
+2026-06-18 15:35:16,111 - INFO - Email scheduler running in background
+2026-06-18 15:35:16,111 - INFO - Scheduler thread started
+2026-06-18 15:35:17,622 - INFO - Main application opened for SK
+2026-06-18 15:35:18,930 - INFO - Connected to database: SK
+2026-06-18 15:35:20,054 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:35:20,564 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:35:20,567 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:35:20,726 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:35:20,727 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:35:21,203 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:36:37,142 - INFO - Overall Estimate using next day date: 11062026 (selected was 10062026)
+2026-06-18 15:36:37,446 - INFO - Sessionwise Estimate using next day date: 11062026 (selected was 10062026)
+2026-06-18 15:36:46,602 - INFO - Overall Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-18 15:36:47,070 - INFO - Sessionwise Estimate using next day date: 18062026 (selected was 17062026)
+2026-06-18 15:37:09,354 - INFO - Overall Estimate using next day date: 10062026 (selected was 09062026)
+2026-06-18 15:37:09,603 - INFO - Sessionwise Estimate using next day date: 10062026 (selected was 09062026)
+2026-06-18 15:37:41,120 - INFO - Email scheduler cleaned up
+2026-06-18 15:37:46,237 - INFO - Application started - Login page initialized
+2026-06-18 15:37:58,391 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 15:37:58,436 - INFO - Trigger scheduled at 17:00
+2026-06-18 15:37:58,439 - INFO - Email scheduler running in background
+2026-06-18 15:37:58,440 - INFO - Scheduler thread started
+2026-06-18 15:38:00,095 - INFO - Main application opened for SK
+2026-06-18 15:38:00,759 - INFO - Connected to database: SK
+2026-06-18 15:38:01,453 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:38:01,997 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:38:02,114 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:38:02,116 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:38:02,318 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:38:02,319 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:38:03,379 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:38:03,381 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:38:03,532 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:38:03,533 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:41:44,668 - INFO - Email scheduler cleaned up
+2026-06-18 15:42:33,533 - INFO - Application started - Login page initialized
+2026-06-18 15:43:01,752 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 15:43:01,793 - INFO - Trigger scheduled at 17:00
+2026-06-18 15:43:01,800 - INFO - Email scheduler running in background
+2026-06-18 15:43:01,801 - INFO - Scheduler thread started
+2026-06-18 15:43:03,273 - INFO - Main application opened for SK
+2026-06-18 15:43:03,485 - INFO - Connected to database: SK
+2026-06-18 15:43:04,367 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:43:04,553 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:43:04,625 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:04,628 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:04,630 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:04,835 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:04,837 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:04,838 - ERROR - Error updating dashboard UI: Rectangle.set() got an unexpected keyword argument 'borderradius'
+2026-06-18 15:43:04,931 - ERROR - Traceback (most recent call last):
+  File "c:\Users\srini\Downloads\app_code\dashboard.py", line 252, in _update_ui
+    self.ax_bar.bar(bar_df['Month'], bar_df['Count'], color=success_color, alpha=0.85, width=0.6, edgecolor="none", borderradius=2)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\__init__.py", line 1524, in inner
+    return func(
+           ^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\axes\_axes.py", line 2654, in bar
+    r._internal_update(kwargs)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1233, in _internal_update
+    return self._update_props(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1206, in _update_props
+    raise AttributeError(
+AttributeError: Rectangle.set() got an unexpected keyword argument 'borderradius'
+
+2026-06-18 15:43:05,450 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:05,452 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:05,454 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:05,617 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:05,618 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:05,619 - ERROR - Error updating dashboard UI: Rectangle.set() got an unexpected keyword argument 'borderradius'
+2026-06-18 15:43:05,622 - ERROR - Traceback (most recent call last):
+  File "c:\Users\srini\Downloads\app_code\dashboard.py", line 252, in _update_ui
+    self.ax_bar.bar(bar_df['Month'], bar_df['Count'], color=success_color, alpha=0.85, width=0.6, edgecolor="none", borderradius=2)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\__init__.py", line 1524, in inner
+    return func(
+           ^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\axes\_axes.py", line 2654, in bar
+    r._internal_update(kwargs)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1233, in _internal_update
+    return self._update_props(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1206, in _update_props
+    raise AttributeError(
+AttributeError: Rectangle.set() got an unexpected keyword argument 'borderradius'
+
+2026-06-18 15:43:19,543 - INFO - User logged out from SK
+2026-06-18 15:43:23,126 - INFO - User logged out from SK
+2026-06-18 15:43:26,024 - INFO - Overall Estimate using next day date: 11062026 (selected was 10062026)
+2026-06-18 15:43:26,239 - INFO - Sessionwise Estimate using next day date: 11062026 (selected was 10062026)
+2026-06-18 15:43:30,268 - INFO - Overall Estimate using next day date: 11062026 (selected was 10062026)
+2026-06-18 15:43:30,431 - INFO - Sessionwise Estimate using next day date: 11062026 (selected was 10062026)
+2026-06-18 15:43:30,693 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:30,695 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:30,699 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:30,875 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:30,876 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:43:30,877 - ERROR - Error updating dashboard UI: Rectangle.set() got an unexpected keyword argument 'borderradius'
+2026-06-18 15:43:30,879 - ERROR - Traceback (most recent call last):
+  File "c:\Users\srini\Downloads\app_code\dashboard.py", line 252, in _update_ui
+    self.ax_bar.bar(bar_df['Month'], bar_df['Count'], color=success_color, alpha=0.85, width=0.6, edgecolor="none", borderradius=2)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\__init__.py", line 1524, in inner
+    return func(
+           ^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\axes\_axes.py", line 2654, in bar
+    r._internal_update(kwargs)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1233, in _internal_update
+    return self._update_props(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1206, in _update_props
+    raise AttributeError(
+AttributeError: Rectangle.set() got an unexpected keyword argument 'borderradius'
+
+2026-06-18 15:46:21,766 - INFO - Email scheduler cleaned up
+2026-06-18 15:46:26,768 - INFO - Application started - Login page initialized
+2026-06-18 15:46:39,410 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 15:46:39,455 - INFO - Trigger scheduled at 17:00
+2026-06-18 15:46:39,539 - INFO - Email scheduler running in background
+2026-06-18 15:46:39,540 - INFO - Scheduler thread started
+2026-06-18 15:46:40,920 - INFO - Main application opened for SK
+2026-06-18 15:46:41,098 - INFO - Connected to database: SK
+2026-06-18 15:46:41,948 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:46:42,150 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:46:42,428 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:46:42,431 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:46:42,434 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:46:42,606 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:46:42,609 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:46:42,610 - ERROR - Error updating dashboard UI: Rectangle.set() got an unexpected keyword argument 'borderradius'
+2026-06-18 15:46:42,618 - ERROR - Traceback (most recent call last):
+  File "c:\Users\srini\Downloads\app_code\dashboard.py", line 252, in _update_ui
+    self.ax_bar.bar(bar_df['Month'], bar_df['Count'], color=success_color, alpha=0.85, width=0.6, edgecolor="none", borderradius=2)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\__init__.py", line 1524, in inner
+    return func(
+           ^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\axes\_axes.py", line 2654, in bar
+    r._internal_update(kwargs)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1233, in _internal_update
+    return self._update_props(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1206, in _update_props
+    raise AttributeError(
+AttributeError: Rectangle.set() got an unexpected keyword argument 'borderradius'
+
+2026-06-18 15:46:43,039 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:46:43,042 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:46:43,044 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:46:43,214 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:46:43,215 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:46:43,217 - ERROR - Error updating dashboard UI: Rectangle.set() got an unexpected keyword argument 'borderradius'
+2026-06-18 15:46:43,221 - ERROR - Traceback (most recent call last):
+  File "c:\Users\srini\Downloads\app_code\dashboard.py", line 252, in _update_ui
+    self.ax_bar.bar(bar_df['Month'], bar_df['Count'], color=success_color, alpha=0.85, width=0.6, edgecolor="none", borderradius=2)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\__init__.py", line 1524, in inner
+    return func(
+           ^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\axes\_axes.py", line 2654, in bar
+    r._internal_update(kwargs)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1233, in _internal_update
+    return self._update_props(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1206, in _update_props
+    raise AttributeError(
+AttributeError: Rectangle.set() got an unexpected keyword argument 'borderradius'
+
+2026-06-18 15:49:51,862 - INFO - User logged out from SK
+2026-06-18 15:51:09,984 - INFO - Application started - Login page initialized
+2026-06-18 15:51:28,793 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 15:51:28,839 - INFO - Trigger scheduled at 17:00
+2026-06-18 15:51:28,907 - INFO - Email scheduler running in background
+2026-06-18 15:51:28,908 - INFO - Scheduler thread started
+2026-06-18 15:51:30,477 - INFO - Main application opened for SK
+2026-06-18 15:51:30,670 - INFO - Connected to database: SK
+2026-06-18 15:51:31,627 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:51:31,630 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:51:31,632 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:51:31,844 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:51:31,845 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:51:31,846 - ERROR - Error updating dashboard UI: Rectangle.set() got an unexpected keyword argument 'borderradius'
+2026-06-18 15:51:31,853 - ERROR - Traceback (most recent call last):
+  File "C:\Users\srini\Downloads\app_code\dashboard.py", line 252, in _update_ui
+    self.ax_bar.bar(bar_df['Month'], bar_df['Count'], color=success_color, alpha=0.85, width=0.6, edgecolor="none", borderradius=2)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\__init__.py", line 1524, in inner
+    return func(
+           ^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\axes\_axes.py", line 2654, in bar
+    r._internal_update(kwargs)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1233, in _internal_update
+    return self._update_props(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1206, in _update_props
+    raise AttributeError(
+AttributeError: Rectangle.set() got an unexpected keyword argument 'borderradius'
+
+2026-06-18 15:51:31,855 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:51:31,981 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:51:32,638 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:51:32,641 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:51:32,643 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:51:32,802 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:51:32,803 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:51:32,804 - ERROR - Error updating dashboard UI: Rectangle.set() got an unexpected keyword argument 'borderradius'
+2026-06-18 15:51:32,808 - ERROR - Traceback (most recent call last):
+  File "C:\Users\srini\Downloads\app_code\dashboard.py", line 252, in _update_ui
+    self.ax_bar.bar(bar_df['Month'], bar_df['Count'], color=success_color, alpha=0.85, width=0.6, edgecolor="none", borderradius=2)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\__init__.py", line 1524, in inner
+    return func(
+           ^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\axes\_axes.py", line 2654, in bar
+    r._internal_update(kwargs)
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1233, in _internal_update
+    return self._update_props(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\srini\AppData\Roaming\Python\Python312\site-packages\matplotlib\artist.py", line 1206, in _update_props
+    raise AttributeError(
+AttributeError: Rectangle.set() got an unexpected keyword argument 'borderradius'
+
+2026-06-18 15:53:06,171 - INFO - Closed connection to SK
+2026-06-18 15:53:08,187 - INFO - Email scheduler cleaned up
+2026-06-18 15:53:47,478 - INFO - Application started - Login page initialized
+2026-06-18 15:53:56,277 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 15:53:56,322 - INFO - Trigger scheduled at 17:00
+2026-06-18 15:53:56,355 - INFO - Email scheduler running in background
+2026-06-18 15:53:56,356 - INFO - Scheduler thread started
+2026-06-18 15:53:57,755 - INFO - Main application opened for SK
+2026-06-18 15:53:57,943 - INFO - Connected to database: SK
+2026-06-18 15:53:58,844 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:53:59,015 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 15:53:59,508 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:53:59,510 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:53:59,513 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:53:59,704 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:53:59,706 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:54:00,369 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:54:00,372 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:54:00,374 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:54:00,566 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 15:54:00,570 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:02:41,682 - INFO - Email scheduler cleaned up
+2026-06-18 16:02:46,641 - INFO - Application started - Login page initialized
+2026-06-18 16:02:56,655 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 16:02:56,701 - INFO - Trigger scheduled at 17:00
+2026-06-18 16:02:56,760 - INFO - Email scheduler running in background
+2026-06-18 16:02:56,761 - INFO - Scheduler thread started
+2026-06-18 16:02:58,153 - INFO - Main application opened for SK
+2026-06-18 16:02:58,356 - INFO - Connected to database: SK
+2026-06-18 16:02:59,458 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:02:59,667 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:02:59,732 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:02:59,736 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:02:59,738 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:02:59,912 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:02:59,913 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:03:00,625 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:03:00,628 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:03:00,631 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:03:00,840 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:03:00,842 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:09:41,968 - INFO - Email scheduler cleaned up
+2026-06-18 16:09:57,190 - INFO - Application started - Login page initialized
+2026-06-18 16:10:14,527 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 16:10:14,567 - INFO - Trigger scheduled at 17:00
+2026-06-18 16:10:14,748 - INFO - Email scheduler running in background
+2026-06-18 16:10:14,748 - INFO - Scheduler thread started
+2026-06-18 16:10:16,526 - INFO - Main application opened for SK
+2026-06-18 16:10:16,723 - INFO - Connected to database: SK
+2026-06-18 16:10:17,429 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:10:17,679 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:10:17,751 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:10:17,754 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:10:17,757 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:10:17,933 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:10:17,934 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:10:18,711 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:10:18,714 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:10:18,716 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:10:18,896 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:10:18,897 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:14:03,788 - INFO - Email scheduler cleaned up
+2026-06-18 16:14:08,140 - INFO - Application started - Login page initialized
+2026-06-18 16:14:17,573 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 16:14:17,613 - INFO - Trigger scheduled at 17:00
+2026-06-18 16:14:17,616 - INFO - Email scheduler running in background
+2026-06-18 16:14:17,616 - INFO - Scheduler thread started
+2026-06-18 16:14:19,107 - INFO - Main application opened for SK
+2026-06-18 16:14:19,290 - INFO - Connected to database: SK
+2026-06-18 16:14:20,252 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:14:20,846 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:14:21,087 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:14:21,091 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:14:21,093 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:14:21,275 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:14:21,277 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:17:32,653 - INFO - Email scheduler cleaned up
+2026-06-18 16:17:38,246 - INFO - Application started - Login page initialized
+2026-06-18 16:17:44,481 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 16:17:44,512 - INFO - Trigger scheduled at 17:00
+2026-06-18 16:17:44,541 - INFO - Email scheduler running in background
+2026-06-18 16:17:44,541 - INFO - Scheduler thread started
+2026-06-18 16:17:46,060 - INFO - Main application opened for SK
+2026-06-18 16:17:46,293 - INFO - Connected to database: SK
+2026-06-18 16:17:47,120 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:17:47,192 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:17:47,194 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:17:47,197 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:17:47,364 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:17:47,365 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:17:47,552 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:17:48,236 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:17:48,239 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:17:48,242 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:17:48,394 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:17:48,395 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:19:29,140 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:19:29,142 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:19:29,145 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:19:29,375 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:19:29,377 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:19:29,556 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:19:29,697 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:19:42,997 - INFO - Email scheduler cleaned up
+2026-06-18 16:20:40,000 - INFO - Application started - Login page initialized
+2026-06-18 16:21:04,167 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 16:21:04,240 - INFO - Trigger scheduled at 17:00
+2026-06-18 16:21:04,264 - INFO - Email scheduler running in background
+2026-06-18 16:21:04,264 - INFO - Scheduler thread started
+2026-06-18 16:21:05,788 - INFO - Main application opened for SK
+2026-06-18 16:21:11,020 - INFO - Connected to database: SK
+2026-06-18 16:21:12,071 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:21:12,413 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:21:12,416 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:21:12,418 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:21:12,605 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:21:12,606 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:21:12,787 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:23:04,266 - INFO - Email scheduler cleaned up
+2026-06-18 16:23:09,139 - INFO - Application started - Login page initialized
+2026-06-18 16:23:16,055 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 16:23:16,095 - INFO - Trigger scheduled at 17:00
+2026-06-18 16:23:16,099 - INFO - Email scheduler running in background
+2026-06-18 16:23:16,099 - INFO - Scheduler thread started
+2026-06-18 16:23:17,656 - INFO - Main application opened for SK
+2026-06-18 16:23:18,087 - INFO - Connected to database: SK
+2026-06-18 16:23:18,657 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:23:19,012 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:23:19,236 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:23:19,239 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:23:19,242 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:23:19,429 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:23:19,431 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:25:15,134 - INFO - Email scheduler cleaned up
+2026-06-18 16:25:20,055 - INFO - Application started - Login page initialized
+2026-06-18 16:25:27,259 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 16:25:27,299 - INFO - Trigger scheduled at 17:00
+2026-06-18 16:25:27,331 - INFO - Email scheduler running in background
+2026-06-18 16:25:27,332 - INFO - Scheduler thread started
+2026-06-18 16:25:28,833 - INFO - Main application opened for SK
+2026-06-18 16:25:29,054 - INFO - Connected to database: SK
+2026-06-18 16:25:29,956 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:25:29,959 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:25:29,962 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:25:30,150 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:25:30,152 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:25:30,329 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:25:30,520 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:39:00,983 - INFO - Email scheduler cleaned up
+2026-06-18 16:39:05,963 - INFO - Application started - Login page initialized
+2026-06-18 16:39:14,562 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 16:39:14,625 - INFO - Trigger scheduled at 17:00
+2026-06-18 16:39:14,658 - INFO - Email scheduler running in background
+2026-06-18 16:39:14,659 - INFO - Scheduler thread started
+2026-06-18 16:39:16,273 - INFO - Main application opened for SK
+2026-06-18 16:39:16,494 - INFO - Connected to database: SK
+2026-06-18 16:39:17,279 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:39:17,501 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:39:17,575 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:39:17,577 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:39:17,580 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:39:17,758 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:39:17,760 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:39:18,527 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:39:18,531 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:39:18,533 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:39:18,685 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:39:18,686 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:43:07,866 - INFO - Email scheduler cleaned up
+2026-06-18 16:43:14,537 - INFO - Application started - Login page initialized
+2026-06-18 16:43:28,296 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 16:43:28,345 - INFO - Trigger scheduled at 17:00
+2026-06-18 16:43:28,363 - INFO - Email scheduler running in background
+2026-06-18 16:43:28,363 - INFO - Scheduler thread started
+2026-06-18 16:43:29,811 - INFO - Main application opened for SK
+2026-06-18 16:43:30,021 - INFO - Connected to database: SK
+2026-06-18 16:43:30,761 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:43:30,931 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:43:31,067 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:43:31,069 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:43:31,072 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:43:31,283 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:43:31,284 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:43:32,095 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:43:32,097 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:43:32,099 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:43:32,253 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:43:32,254 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:45:09,546 - INFO - Email scheduler cleaned up
+2026-06-18 16:50:04,834 - INFO - Application started - Login page initialized
+2026-06-18 16:50:28,177 - INFO - User logged in via Enterprise App v2: sk_admin
+2026-06-18 16:50:28,226 - INFO - Trigger scheduled at 17:00
+2026-06-18 16:50:28,272 - INFO - Email scheduler running in background
+2026-06-18 16:50:28,273 - INFO - Scheduler thread started
+2026-06-18 16:50:29,776 - INFO - Main application opened for SK
+2026-06-18 16:50:30,021 - INFO - Connected to database: SK
+2026-06-18 16:50:30,784 - INFO - Overall Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:50:30,969 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:50:30,973 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:50:30,975 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:50:31,167 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:50:31,168 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:50:31,378 - INFO - Sessionwise Estimate using next day date: 19062026 (selected was 18062026)
+2026-06-18 16:50:32,094 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:50:32,096 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:50:32,099 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:50:32,294 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:50:32,295 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-06-18 16:54:40,355 - INFO - Email scheduler cleaned up

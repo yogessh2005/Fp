@@ -1,5 +1,269 @@
 [
     {
+        "timestamp": "2026-06-18 16:50:28",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 16:43:28",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 16:39:14",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 16:25:27",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 16:23:16",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 16:21:04",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 16:17:44",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 16:14:17",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 16:10:14",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 16:02:56",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:53:56",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:51:28",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:49:50",
+        "action_type": "Logout",
+        "username": "sk_admin",
+        "details": "User logged out.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:46:39",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:43:34",
+        "action_type": "Export",
+        "username": "sk_admin",
+        "details": "Exported PDF: Store Data_SK_10062026.pdf",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:43:21",
+        "action_type": "Logout",
+        "username": "sk_admin",
+        "details": "User logged out.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:43:17",
+        "action_type": "Logout",
+        "username": "sk_admin",
+        "details": "User logged out.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:43:01",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:37:58",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:35:16",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:30:41",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:18:36",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:15:36",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 15:15:19",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "Failed attempt: Invalid password",
+        "status": "Failed",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 13:37:15",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 13:34:09",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 13:28:46",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 13:26:04",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 13:23:30",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 13:15:24",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 13:11:52",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 13:07:49",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
+        "timestamp": "2026-06-18 13:01:57",
+        "action_type": "Login",
+        "username": "sk_admin",
+        "details": "User successfully authenticated.",
+        "status": "Success",
+        "ip_address": "127.0.0.1"
+    },
+    {
         "timestamp": "2026-06-18 12:38:18",
         "action_type": "Login",
         "username": "sk_admin",

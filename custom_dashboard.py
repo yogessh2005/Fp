@@ -68,13 +68,20 @@ class CustomDashboardTab(tk.Frame):
         
         idx = 0
         for title, var in self.kpis.items():
-            card = tk.Frame(self.kpi_frame, bg=Config.COLORS["white"], relief="solid", bd=1)
-            card.grid(row=0, column=idx, padx=5, sticky="nsew")
+            card = tk.Frame(self.kpi_frame, bg=Config.COLORS["white"], relief="flat", bd=0)
+            card.grid(row=0, column=idx, padx=8, pady=5, sticky="nsew")
             card.grid_propagate(False)
-            card.config(height=90)
+            card.config(height=100)
             
-            tk.Label(card, text=title, font=("Segoe UI", 11), bg=Config.COLORS["white"], fg=Config.COLORS["gray"]).pack(pady=(15, 0))
-            tk.Label(card, textvariable=var, font=("Segoe UI", 18, "bold"), bg=Config.COLORS["white"], fg=Config.COLORS["primary"]).pack(pady=(0, 15))
+            # Subtle accent bar
+            accent = tk.Frame(card, bg=Config.COLORS["primary"], width=4)
+            accent.pack(side="left", fill="y")
+            
+            content = tk.Frame(card, bg=Config.COLORS["white"])
+            content.pack(side="left", fill="both", expand=True, padx=15)
+            
+            tk.Label(content, text=title.upper(), font=("Segoe UI", 10, "bold"), bg=Config.COLORS["white"], fg=Config.COLORS["gray"]).pack(pady=(20, 0), anchor="w")
+            tk.Label(content, textvariable=var, font=("Segoe UI", 24, "bold"), bg=Config.COLORS["white"], fg=Config.COLORS["primary"]).pack(pady=(5, 10), anchor="w")
             idx += 1
             
         # 4. Charts area
@@ -182,36 +189,54 @@ class CustomDashboardTab(tk.Frame):
             primary_color = Config.COLORS.get("primary", "#6B4F3B")
             success_color = Config.COLORS.get("success", "#556B2F")
             
+            def clean_ax(ax):
+                ax.clear()
+                ax.spines['top'].set_visible(False)
+                ax.spines['right'].set_visible(False)
+                ax.spines['left'].set_color(Config.COLORS["border"])
+                ax.spines['bottom'].set_color(Config.COLORS["border"])
+                ax.set_facecolor(Config.COLORS["light"])
+            
+            self.fig_line.patch.set_facecolor(Config.COLORS["light"])
+            self.fig_bar.patch.set_facecolor(Config.COLORS["light"])
+            self.fig_pie.patch.set_facecolor(Config.COLORS["light"])
+            
             # Update line chart
-            self.ax_line.clear()
-            self.ax_line.set_title("Report Trends (Last 7 Days)", fontsize=10, fontweight='bold', color=primary_color)
+            clean_ax(self.ax_line)
+            self.ax_line.set_title("Report Trends (Last 7 Days)", fontsize=11, fontweight='bold', color=primary_color, pad=15)
             if not line_df.empty:
                 x_labels = line_df['Date'].astype(str).str[5:]
-                self.ax_line.plot(x_labels, line_df['Count'], marker='o', color=primary_color, linestyle='-', linewidth=2)
-                self.ax_line.tick_params(axis='x', rotation=45, labelsize=8)
-                self.ax_line.tick_params(axis='y', labelsize=8)
-                self.ax_line.grid(True, linestyle='--', alpha=0.6)
+                self.ax_line.plot(x_labels, line_df['Count'], marker='o', color=primary_color, linestyle='-', linewidth=2.5, markersize=6)
+                self.ax_line.fill_between(x_labels, line_df['Count'], color=primary_color, alpha=0.1)
+                self.ax_line.tick_params(axis='x', rotation=45, labelsize=9, colors=Config.COLORS["gray"])
+                self.ax_line.tick_params(axis='y', labelsize=9, colors=Config.COLORS["gray"])
+                self.ax_line.grid(True, linestyle='--', alpha=0.4, color=Config.COLORS["border"])
             self.fig_line.tight_layout()
             self.canvas_line.draw()
             
             # Update bar chart
-            self.ax_bar.clear()
-            self.ax_bar.set_title("Tasks Overview (Last 6 Months)", fontsize=10, fontweight='bold', color=primary_color)
+            clean_ax(self.ax_bar)
+            self.ax_bar.set_title("Tasks Overview (Last 6 Months)", fontsize=11, fontweight='bold', color=primary_color, pad=15)
             if not bar_df.empty:
-                self.ax_bar.bar(bar_df['Month'], bar_df['Count'], color=success_color, alpha=0.8)
-                self.ax_bar.tick_params(axis='x', labelsize=8)
-                self.ax_bar.tick_params(axis='y', labelsize=8)
-                self.ax_bar.grid(True, axis='y', linestyle='--', alpha=0.6)
+                self.ax_bar.bar(bar_df['Month'], bar_df['Count'], color=success_color, alpha=0.85, width=0.6, edgecolor="none", borderradius=2) # 'borderradius' might not be standard but width/edgecolor helps
+                self.ax_bar.tick_params(axis='x', labelsize=9, colors=Config.COLORS["gray"])
+                self.ax_bar.tick_params(axis='y', labelsize=9, colors=Config.COLORS["gray"])
+                self.ax_bar.grid(True, axis='y', linestyle='--', alpha=0.4, color=Config.COLORS["border"])
             self.fig_bar.tight_layout()
             self.canvas_bar.draw()
             
             # Update pie chart
             self.ax_pie.clear()
-            self.ax_pie.set_title("Activity Distribution", fontsize=10, fontweight='bold', color=primary_color)
+            self.ax_pie.set_title("Activity Distribution", fontsize=11, fontweight='bold', color=primary_color, pad=15)
             if not pie_df.empty:
-                colors = [Config.COLORS.get("primary", "#6B4F3B"), Config.COLORS.get("warning", "#D2691E"), 
-                          Config.COLORS.get("success", "#556B2F"), Config.COLORS.get("info", "#4682B4")]
-                self.ax_pie.pie(pie_df['Count'], labels=pie_df['Category'], autopct='%1.1f%%', startangle=90, colors=colors, textprops={'fontsize': 8})
+                colors = [Config.COLORS.get("primary", "#1A5276"), Config.COLORS.get("warning", "#F39C12"), 
+                          Config.COLORS.get("success", "#2ECC71"), Config.COLORS.get("info", "#3498DB")]
+                wedges, texts, autotexts = self.ax_pie.pie(pie_df['Count'], labels=pie_df['Category'], autopct='%1.1f%%', 
+                                                           startangle=90, colors=colors, textprops={'fontsize': 9, 'color': Config.COLORS["dark"]},
+                                                           wedgeprops={'edgecolor': Config.COLORS["light"], 'linewidth': 1.5, 'antialiased': True})
+                for autotext in autotexts:
+                    autotext.set_color('white')
+                    autotext.set_weight('bold')
             self.fig_pie.tight_layout()
             self.canvas_pie.draw()
             

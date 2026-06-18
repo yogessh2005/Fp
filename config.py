@@ -108,30 +108,30 @@ class Config:
     
     # Theme Colors
     COLORS = {
-        "primary": "#6B4F3B",          # Dark Brown (Text, primary buttons)
-        "secondary": "#A38A75",        # Lighter Brown
-        "accent": "#8C6A50",           # Medium Brown
-        "success": "#556B2F",          # Dark Olive Green
-        "warning": "#D2691E",          # Chocolate / Burnt Orange
-        "danger": "#8B0000",           # Dark Red
-        "info": "#4682B4",             # Steel Blue (Muted)
-        "light": "#EBE7E0",            # Beige Background
-        "dark": "#4A3628",             # Very Dark Brown
+        "primary": "#1A5276",          # Deep elegant blue
+        "secondary": "#2980B9",        # Bright blue
+        "accent": "#27AE60",           # Vibrant green accent
+        "success": "#2ECC71",          # Emerald green
+        "warning": "#F39C12",          # Bright orange
+        "danger": "#E74C3C",           # Crimson red
+        "info": "#3498DB",             # Light blue
+        "light": "#F8F9FA",            # App background
+        "dark": "#2C3E50",             # Dark slate for text
         "white": "#FFFFFF",            # White for cards
-        "black": "#2C1E16",            # Off-black / deep brown
-        "gray": "#8C8C8C",             # Gray
-        "border": "#D3CEC4",           # Subtle Beige-Gray Border
-        "hover": "#8C6A50",            # Hover state
-        "gradient_start": "#6B4F3B",
-        "gradient_end": "#4A3628",
-        "alternate_row": "#F5F3EF",    # Very light beige
-        "weekend": "#F0EAE1",          
-        "sunday": "#E8DFD5",           
-        "email_highlight": "#EBE7E0",  
-        "scheduled": "#F5F3EF",        
+        "black": "#17202A",            # Almost black
+        "gray": "#7F8C8D",             # Soft gray
+        "border": "#E5E7E9",           # Soft border
+        "hover": "#154360",            # Hover state (darker primary)
+        "gradient_start": "#1A5276",
+        "gradient_end": "#2980B9",
+        "alternate_row": "#F4F6F7",    # Subtle zebra striping
+        "weekend": "#EAEDED",          
+        "sunday": "#E5E7E9",           
+        "email_highlight": "#F8F9FA",  
+        "scheduled": "#D6EAF8",        
         "card_bg": "#FFFFFF",          
-        "selected_row": "#DED9D1",     
-        "selected_border": "#6B4F3B",  
+        "selected_row": "#D6EAF8",     
+        "selected_border": "#2980B9",  
     }
    
     # Company-specific colors
@@ -149,6 +149,12 @@ class Config:
         {"name": "Actual Sales", "icon": "💰", "description": "Sales and revenue analysis"},
         {"name": "Score", "icon": "🏆", "description": "Performance scoring system"}
     ]
+    
+    LOOKUP_SHEETS = {
+        "SK": "SK",
+        "EVPL": "evpl",
+        "Maximus": "maximus",
+    }
    
     # ⭐ Scoring Rules - Updated with new PSERM logic
     SCORING_RULES = [
@@ -186,12 +192,4 @@ class Config:
         ["Total =", "GRN + Closing Stock + Estimate Overall + Session Wise + Sales"],
         ["Maximum =", "100 Points"],
     ]
-
-
-LOOKUP_SHEETS = {
-    "SK": "SK",
-    "EVPL": "evpl",
-    "Maximus": "maximus",
-}
-
 

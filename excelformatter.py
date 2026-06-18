@@ -38,14 +38,17 @@ class ExcelFormatter:
     @staticmethod
     def apply_clean_formatting(worksheet, df):
         """Apply highly professional formatting with highlights and filters"""
+        
+        # Turn off default Excel gridlines for a cleaner look
+        worksheet.sheet_view.showGridLines = False
        
         # 1. Header Style (Deep primary color with bold white text)
         header_font = Font(
             name='Segoe UI', size=11, bold=True, color='FFFFFF'
         )
-        # We use a solid rich dark grey/blue for a professional look if config is too plain
+        # Use a mustard/tan color to match the requested scorecard style
         header_fill = PatternFill(
-            start_color='2C3E50', end_color='2C3E50', fill_type="solid"
+            start_color='D28E3B', end_color='D28E3B', fill_type="solid"
         )
         header_alignment = Alignment(
             horizontal='center', vertical='center', wrap_text=False
@@ -83,16 +86,15 @@ class ExcelFormatter:
         
         danger_fill = PatternFill(start_color='FFEBEE', end_color='FFEBEE', fill_type='solid')
         danger_font = Font(name='Segoe UI', size=10, color='C62828', bold=True)
+        # Score specific highlight styles (soft/pastel colors)
+        score_green_fill = PatternFill(start_color='E8F5E9', end_color='E8F5E9', fill_type='solid')
+        score_green_font = Font(name='Segoe UI', size=10, color='2E7D32', bold=True)
         
-        # Score specific highlight styles
-        score_green_fill = PatternFill(start_color='4CAF50', end_color='4CAF50', fill_type='solid')
-        score_green_font = Font(name='Segoe UI', size=10, color='FFFFFF', bold=True)
+        score_orange_fill = PatternFill(start_color='FFF3E0', end_color='FFF3E0', fill_type='solid')
+        score_orange_font = Font(name='Segoe UI', size=10, color='E65100', bold=True)
         
-        score_orange_fill = PatternFill(start_color='FF9800', end_color='FF9800', fill_type='solid')
-        score_orange_font = Font(name='Segoe UI', size=10, color='FFFFFF', bold=True)
-        
-        score_red_fill = PatternFill(start_color='F44336', end_color='F44336', fill_type='solid')
-        score_red_font = Font(name='Segoe UI', size=10, color='FFFFFF', bold=True)
+        score_red_fill = PatternFill(start_color='FFEBEE', end_color='FFEBEE', fill_type='solid')
+        score_red_font = Font(name='Segoe UI', size=10, color='C62828', bold=True)
        
         # Apply value formatting and keyword highlighting
         for row_idx, row in enumerate(df.itertuples(index=False), 2):

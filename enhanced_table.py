@@ -57,13 +57,14 @@ class EnhancedTable(ttk.Frame):
             selectmode="browse"
         )
        
-        self.vsb = ttk.Scrollbar(self.tree_frame, orient="vertical", command=self.tree.yview)
-        self.hsb = ttk.Scrollbar(self.tree_frame, orient="horizontal", command=self.tree.xview)
-        self.tree.configure(yscrollcommand=self.vsb.set, xscrollcommand=self.hsb.set)
+        # Removed both vertical and horizontal scrollbars as requested
+        # self.vsb = ttk.Scrollbar(self.tree_frame, orient="vertical", command=self.tree.yview)
+        # self.hsb = ttk.Scrollbar(self.tree_frame, orient="horizontal", command=self.tree.xview)
+        # self.tree.configure(xscrollcommand=self.hsb.set)
        
         self.tree.grid(row=0, column=0, sticky="nsew")
-        self.vsb.grid(row=0, column=1, sticky="ns")
-        self.hsb.grid(row=1, column=0, sticky="ew")
+        # self.vsb.grid(row=0, column=1, sticky="ns")
+        # self.hsb.grid(row=1, column=0, sticky="ew")
        
         self.tree_frame.grid_rowconfigure(0, weight=1)
         self.tree_frame.grid_columnconfigure(0, weight=1)
@@ -73,8 +74,8 @@ class EnhancedTable(ttk.Frame):
         
         style = ttk.Style()
         style.configure("Enhanced.Treeview",
-            font=("Segoe UI", 10),
-            rowheight=40,
+            font=("Segoe UI", 9),
+            rowheight=26,
             background=Config.COLORS["white"],
             foreground=Config.COLORS["dark"],
             fieldbackground=Config.COLORS["white"],
@@ -83,8 +84,8 @@ class EnhancedTable(ttk.Frame):
         )
         style.configure("Enhanced.Treeview.Heading",
             font=("Segoe UI", 11, "bold"),
-            background=Config.COLORS["light"],
-            foreground=Config.COLORS["primary"],
+            background=Config.COLORS["primary"],
+            foreground=Config.COLORS["white"],
             relief="flat",
             borderwidth=0,
             padding=10
@@ -99,7 +100,7 @@ class EnhancedTable(ttk.Frame):
             foreground=[('selected', Config.COLORS["primary"])]
         )
         style.map("Enhanced.Treeview.Heading",
-            background=[('active', Config.COLORS["border"])]
+            background=[('active', Config.COLORS["hover"])]
         )
         
         self.tree.tag_configure('selected_row', background=Config.COLORS["selected_row"], foreground=Config.COLORS["primary"])
@@ -143,21 +144,9 @@ class EnhancedTable(ttk.Frame):
         self.tree["columns"] = columns
        
         for col in columns:
-            is_numeric = False
-            if not self.data.empty:
-                non_nulls = self.data[col].dropna()
-                if len(non_nulls) > 0:
-                    converted = pd.to_numeric(non_nulls, errors='coerce')
-                    if converted.notna().sum() == len(non_nulls):
-                        is_numeric = True
-            
-            if is_numeric:
-                header_text = col + " ▼"
-            else:
-                header_text = col
-                
+            header_text = col + " ▼"
             self.tree.heading(col, text=header_text)
-            self.tree.column(col, anchor="center", minwidth=100)
+            self.tree.column(col, anchor="center", minwidth=20, stretch=True)
        
         for idx, (_, row) in enumerate(self.filtered_data.iterrows()):
             values = [str(v) if pd.notna(v) else "" for v in row]
@@ -172,8 +161,17 @@ class EnhancedTable(ttk.Frame):
                 tag = 'evenrow' if idx % 2 == 0 else 'oddrow'
            
             self.tree.insert("", "end", values=values, tags=(tag,))
-       
+        
+        # Dynamically set height to exactly match the data to avoid excess empty rows
+        num_rows = len(self.filtered_data)
+        self.tree.configure(height=max(1, num_rows))
+        
         self.auto_adjust_columns()
+        
+        # Adjust the treeview height to show all rows without vertical scrolling
+        total_rows = len(self.filtered_data)
+        if total_rows > 0:
+            self.tree.configure(height=total_rows)
    
     def auto_adjust_columns(self):
         for col in self.tree["columns"]:
@@ -187,9 +185,9 @@ class EnhancedTable(ttk.Frame):
                     if value:
                         width = len(str(value)) * 9
                         max_width = max(max_width, width)
-            final_width = min(max_width + 30, 350)
-            final_width = max(final_width, 100)
-            self.tree.column(col, width=final_width)
+            final_width = min(max_width + 10, 200)
+            final_width = max(final_width, 30)
+            self.tree.column(col, width=final_width, stretch=True)
             
     def on_header_click(self, event):
         region = self.tree.identify_region(event.x, event.y)
@@ -199,16 +197,7 @@ class EnhancedTable(ttk.Frame):
                 col_idx = int(col_id.replace('#', '')) - 1
                 col_name = self.tree["columns"][col_idx]
                 
-                is_numeric = False
-                if not self.data.empty:
-                    non_nulls = self.data[col_name].dropna()
-                    if len(non_nulls) > 0:
-                        converted = pd.to_numeric(non_nulls, errors='coerce')
-                        if converted.notna().sum() == len(non_nulls):
-                            is_numeric = True
-                
-                if is_numeric:
-                    self.open_column_filter(col_name, event.x_root, event.y_root)
+                self.open_column_filter(col_name, event.x_root, event.y_root)
 
     def open_column_filter(self, col_name, x, y):
         from advancedfilterdialog import ColumnFilterDialog
@@ -247,12 +236,16 @@ class EnhancedTable(ttk.Frame):
             elif op == "is less than": return numeric_col < numeric_val
             elif op == "is less than or equal to": return numeric_col <= numeric_val
         except:
-            # Fallback to string comparison
-            str_col = df[col].astype(str).str.lower()
-            val = str(val).lower()
+            # Fallback to string comparison with whitespace stripped
+            str_col = df[col].astype(str).str.strip().str.lower()
+            val = str(val).strip().lower()
             
             if op == "is equal to": return str_col == val
             elif op == "is not equal to": return str_col != val
+            elif op == "contains": return str_col.str.contains(val, na=False, regex=False)
+            elif op == "does not contain": return ~str_col.str.contains(val, na=False, regex=False)
+            elif op == "starts with": return str_col.str.startswith(val, na=False)
+            elif op == "ends with": return str_col.str.endswith(val, na=False)
             elif op == "is greater than": return str_col > val
             elif op == "is greater than or equal to": return str_col >= val
             elif op == "is less than": return str_col < val

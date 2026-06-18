@@ -1,5 +1,165 @@
 [
     {
+        "id": "20260618160258233213",
+        "timestamp": "2026-06-18 16:02:58",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618155357874825",
+        "timestamp": "2026-06-18 15:53:57",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618155130549973",
+        "timestamp": "2026-06-18 15:51:30",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618154640986942",
+        "timestamp": "2026-06-18 15:46:40",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618154334320657",
+        "timestamp": "2026-06-18 15:43:34",
+        "type": "report",
+        "message": "Report generated successfully: Store Data PDF",
+        "icon": "\ud83d\udcca",
+        "is_read": false
+    },
+    {
+        "id": "20260618154303362678",
+        "timestamp": "2026-06-18 15:43:03",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618153800179897",
+        "timestamp": "2026-06-18 15:38:00",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618153517672810",
+        "timestamp": "2026-06-18 15:35:17",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618153043071138",
+        "timestamp": "2026-06-18 15:30:43",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618151838063270",
+        "timestamp": "2026-06-18 15:18:38",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618151537648954",
+        "timestamp": "2026-06-18 15:15:37",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618133716450589",
+        "timestamp": "2026-06-18 13:37:16",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618133410536070",
+        "timestamp": "2026-06-18 13:34:10",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618132848192424",
+        "timestamp": "2026-06-18 13:28:48",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618132606348743",
+        "timestamp": "2026-06-18 13:26:06",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618132331885176",
+        "timestamp": "2026-06-18 13:23:31",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618131526296056",
+        "timestamp": "2026-06-18 13:15:26",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618131153599759",
+        "timestamp": "2026-06-18 13:11:53",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618130750948946",
+        "timestamp": "2026-06-18 13:07:50",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
+        "id": "20260618130158504439",
+        "timestamp": "2026-06-18 13:01:58",
+        "type": "success",
+        "message": "Welcome back, sk_admin!",
+        "icon": "\u2705",
+        "is_read": false
+    },
+    {
         "id": "20260618123820345035",
         "timestamp": "2026-06-18 12:38:20",
         "type": "success",

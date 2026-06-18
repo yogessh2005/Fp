@@ -83,150 +83,183 @@ class MainApp(tk.Toplevel):
         self.attributes('-fullscreen', not self.attributes('-fullscreen'))
    
     def create_header(self):
-        header = tk.Frame(self, bg=Config.COLORS["white"], height=100)
-        header.pack(fill="x")
-        header.pack_propagate(False)
+        header = tk.Frame(self, bg=Config.COLORS["light"])
+        header.pack(fill="x", pady=(0, 10))
         
         company_color = Config.COMPANY_COLORS.get(self.company, Config.COLORS["accent"])
         
-        logo_frame = tk.Frame(header, bg=Config.COLORS["white"])
-        logo_frame.pack(side="left", padx=30, pady=20)
+        # --- TOP ROW: Identity & Profile (FULL NAVBAR) ---
+        self.top_nav = tk.Frame(header, bg=Config.COLORS["primary"])
+        self.top_nav.pack(fill="x", ipady=8, ipadx=20)
         
-        tk.Label(
-            logo_frame,
-            text=f"{Config.COMPANY_LOGO}",
-            font=("Segoe UI", 28),
-            bg=Config.COLORS["white"],
-            fg=company_color
-        ).pack(side="left", padx=(0, 15))
+        logo_frame = tk.Frame(self.top_nav, bg=Config.COLORS["primary"])
+        logo_frame.pack(side="left", padx=(10, 0))
         
+        try:
+            # Bar chart icon
+            logo_img = tk.PhotoImage(file=os.path.join(os.path.dirname(__file__), "assets", "logo.png")).subsample(8, 8)
+            logo_label = tk.Label(logo_frame, image=logo_img, bg=Config.COLORS["primary"])
+            logo_label.image = logo_img
+            logo_label.pack(side="left", padx=(0, 10))
+        except:
+            # Fallback text icon
+            tk.Label(
+                logo_frame, 
+                text="📊", 
+                font=("Segoe UI", 24),
+                bg=Config.COLORS["primary"],
+                fg=Config.COLORS["white"]
+            ).pack(side="left", padx=(0, 15))
+            
         company_label = tk.Label(
             logo_frame,
             text=f"{self.company.upper()} Portal",
             font=("Segoe UI", 20, "bold"),
-            bg=Config.COLORS["white"],
-            fg=Config.COLORS["primary"]
+            bg=Config.COLORS["primary"],
+            fg=Config.COLORS["white"]
         )
         company_label.pack(side="left")
         
-        date_frame = tk.Frame(header, bg=Config.COLORS["white"])
+        date_frame = tk.Frame(self.top_nav, bg=Config.COLORS["primary"])
         date_frame.pack(side="left", padx=50)
         
         tk.Label(
             date_frame,
             text="Analysis Date:",
             font=("Segoe UI", 11),
-            bg=Config.COLORS["white"],
-            fg=Config.COLORS["secondary"]
+            bg=Config.COLORS["primary"],
+            fg=Config.COLORS["light"]
         ).pack(side="left", padx=(0, 10))
         
         self.date_var = tk.StringVar(value=Config.DEFAULT_DATE_DISPLAY)
         date_display = tk.Entry(
             date_frame,
             textvariable=self.date_var,
-            font=("Segoe UI", 11),
+            font=("Segoe UI", 11, "bold"),
             width=15,
             justify="center",
-            bg=Config.COLORS["light"],
-            relief="solid",
-            bd=1,
+            bg=Config.COLORS["hover"],
+            fg=Config.COLORS["white"],
+            relief="flat",
             state="readonly",
-            readonlybackground=Config.COLORS["light"]
+            readonlybackground=Config.COLORS["hover"]
         )
-        date_display.pack(side="left", padx=5, ipady=5)
+        date_display.pack(side="left", padx=5, ipady=6)
         
         calendar_btn = ModernButton(
             date_frame,
             text="📅 Select Date",
             command=self.show_calendar,
-            variant="primary",
+            variant="secondary",
             width=12
         )
         calendar_btn.pack(side="left", padx=5)
         
-        action_frame = tk.Frame(header, bg=Config.COLORS["white"])
-        action_frame.pack(side="right", padx=30, pady=5)
+        # --- Center Nav (Progress & Refresh) ---
+        self.nav_stats = tk.Frame(self.top_nav, bg=Config.COLORS["primary"])
+        self.nav_stats.pack(side="left", padx=20)
+        
+        self.progress_label = tk.Label(
+            self.nav_stats,
+            text="0/5 Loaded",
+            font=("Segoe UI", 10, "bold"),
+            bg=Config.COLORS["primary"],
+            fg=Config.COLORS["white"]
+        )
+        self.progress_label.pack(side="left", padx=5)
+        
+        self.progress_bar = ttk.Progressbar(
+            self.nav_stats,
+            length=100,
+            mode='determinate',
+            style="modern.Horizontal.TProgressbar"
+        )
+        self.progress_bar.pack(side="left", padx=5)
+        
+        self.last_refreshed_btn = tk.Button(
+            self.nav_stats, 
+            text="🕒 Last Refreshed: Just Now", 
+            font=("Segoe UI", 9, "bold"),
+            bg=Config.COLORS["primary"], 
+            fg=Config.COLORS["white"], 
+            activebackground=Config.COLORS["hover"],
+            activeforeground=Config.COLORS["white"],
+            relief="flat",
+            command=self.refresh_all_data, 
+            padx=10, pady=2, cursor="hand2"
+        )
+        self.last_refreshed_btn.pack(side="left", padx=15)
+        
+        self.schedule_indicator = tk.Label(
+            self.nav_stats,
+            text="",
+            font=("Segoe UI", 9, "bold"),
+            bg=Config.COLORS["primary"],
+            fg=Config.COLORS["accent"]
+        )
+        self.schedule_indicator.pack(side="left", padx=5)
+        
+        # Right Nav (for profile, theme, logout)
+        self.right_nav = tk.Frame(self.top_nav, bg=Config.COLORS["primary"])
+        self.right_nav.pack(side="right", padx=(0, 10))
+        
+        self.logout_btn = ModernButton(
+            self.right_nav,
+            text="🚪 Logout",
+            command=self.logout,
+            variant="danger"
+        )
+        self.logout_btn.pack(side="right", padx=5)
+        
+        # --- SECOND ROW: Action Bar ---
+        self.action_frame = tk.Frame(header, bg=Config.COLORS["white"])
+        self.action_frame.pack(fill="x", padx=20, pady=(5, 10))
         
         self.refresh_btn = ModernButton(
-            action_frame,
+            self.action_frame,
             text="🔄 Refresh All",
             command=self.refresh_all_data,
             variant="secondary"
         )
-        self.refresh_btn.grid(row=0, column=0, padx=5, pady=3)
+        self.refresh_btn.pack(side="left", padx=5)
         
         self.export_btn = ModernButton(
-            action_frame,
+            self.action_frame,
             text="📥 Export to Excel",
             command=self.export_to_excel,
             variant="success"
         )
-        self.export_btn.grid(row=0, column=1, padx=5, pady=3)
+        self.export_btn.pack(side="left", padx=5)
         
         self.schedule_btn = ModernButton(
-            action_frame,
+            self.action_frame,
             text="⏰ Schedule Report",
             command=self.open_schedule_dialog,
             variant="schedule"
         )
-        self.schedule_btn.grid(row=0, column=2, padx=5, pady=3)
+        self.schedule_btn.pack(side="left", padx=5)
         
-        # ⭐ Upload GRN Target Button (Background Upload)
         self.upload_grn_btn = ModernButton(
-            action_frame,
+            self.action_frame,
             text="📤 Upload GRN Target",
             command=self.upload_grn_target,
             variant="upload",
             width=16
         )
-        self.upload_grn_btn.grid(row=0, column=3, padx=5, pady=3)
+        self.upload_grn_btn.pack(side="left", padx=5)
         
-        # ⭐ GRN Target Display
         self.grn_target_label = tk.Label(
-            action_frame,
+            self.action_frame,
             text=f"Target: {GRNTargetManager.get_target():.1f}",
             font=("Segoe UI", 10, "bold"),
             bg=Config.COLORS["white"],
             fg=Config.COLORS["success"]
         )
-        self.grn_target_label.grid(row=0, column=4, padx=5, pady=3, sticky="w")
-        
-        self.progress_label = tk.Label(
-            action_frame,
-            text="0/5 Loaded",
-            font=("Segoe UI", 10, "bold"),
-            bg=Config.COLORS["white"],
-            fg=company_color
-        )
-        self.progress_label.grid(row=1, column=0, padx=5, pady=3, sticky="e")
-        
-        self.progress_bar = ttk.Progressbar(
-            action_frame,
-            length=150,
-            mode='determinate',
-            style="modern.Horizontal.TProgressbar"
-        )
-        self.progress_bar.grid(row=1, column=1, padx=5, pady=3, sticky="w")
-        
-        self.schedule_indicator = tk.Label(
-            action_frame,
-            text="",
-            font=("Segoe UI", 10),
-            bg=Config.COLORS["white"]
-        )
-        self.schedule_indicator.grid(row=1, column=2, padx=5, pady=3, sticky="w", columnspan=2)
-        
-        self.logout_btn = ModernButton(
-            action_frame,
-            text="🚪 Logout",
-            command=self.logout,
-            variant="danger"
-        )
-        self.logout_btn.grid(row=1, column=4, padx=5, pady=3, sticky="e")
+        self.grn_target_label.pack(side="left", padx=5)
         
         style = ttk.Style()
         style.theme_use('clam')
-        style.configure("modern.Horizontal.TProgressbar", background=Config.COLORS["success"], thickness=8)
+        style.configure("modern.Horizontal.TProgressbar", background=Config.COLORS["success"], thickness=6)
         
         self.update_schedule_indicator()
    
@@ -594,27 +627,6 @@ class MainApp(tk.Toplevel):
         container = tk.Frame(parent, bg=Config.COLORS["white"])
         container.pack(fill="both", expand=True, padx=5, pady=5)
        
-        button_frame = tk.Frame(container, bg=Config.COLORS["white"])
-        button_frame.pack(fill="x", pady=(5, 10))
-       
-        left_button_frame = tk.Frame(button_frame, bg=Config.COLORS["white"])
-        left_button_frame.pack(side="left")
-       
-        # Advanced filter button removed (now via headers)
-       
-        clear_filter_btn = ModernButton(left_button_frame, text="✗ Clear Filters",
-                                         command=lambda: self.clear_filters(module_name), variant="warning", width=12)
-        clear_filter_btn.pack(side="left", padx=5)
-       
-        rules_btn = ModernButton(
-            button_frame,
-            text="ℹ️ Rules",
-            command=lambda: self.show_module_rules(module_name),
-            variant="info",
-            width=10
-        )
-        rules_btn.pack(side="right", padx=5)
-       
         table = EnhancedTable(
             container,
             on_select_callback=self.on_row_selected
@@ -665,16 +677,16 @@ class MainApp(tk.Toplevel):
                 self.update_status("Ready")
    
     def create_status_bar(self):
-        self.status_bar = tk.Frame(self, bg=Config.COLORS["primary"], height=35)
-        self.status_bar.pack(side="bottom", fill="x")
-        self.status_bar.pack_propagate(False)
+        self.status_bar_bottom = tk.Frame(self, bg=Config.COLORS["primary"], height=30)
+        self.status_bar_bottom.pack(side="bottom", fill="x")
+        self.status_bar_bottom.pack_propagate(False)
        
-        self.status_label = tk.Label(self.status_bar, text="Ready", font=("Segoe UI", 10),
+        self.status_label = tk.Label(self.status_bar_bottom, text="Ready", font=("Segoe UI", 9),
                                       bg=Config.COLORS["primary"], fg=Config.COLORS["white"], anchor="w")
         self.status_label.pack(side="left", padx=15)
        
-        self.time_label = tk.Label(self.status_bar, text=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                                    font=("Segoe UI", 10), bg=Config.COLORS["primary"], fg=Config.COLORS["white"])
+        self.time_label = tk.Label(self.status_bar_bottom, text=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                                    font=("Segoe UI", 9), bg=Config.COLORS["primary"], fg=Config.COLORS["white"])
         self.time_label.pack(side="right", padx=15)
        
         self.update_clock()
@@ -690,6 +702,10 @@ class MainApp(tk.Toplevel):
         
     def on_tab_changed(self, event):
         current_tab_index = self.notebook.index(self.notebook.select())
+        
+        for i, btn in enumerate(self.tab_buttons):
+            btn.set_active(i == current_tab_index)
+            
         if current_tab_index == 0:
             self.update_status("Viewing Dashboard module - Showing Real-Time data")
             return
@@ -763,13 +779,74 @@ class MainApp(tk.Toplevel):
        
         try:
             df = self.db_handler.execute_query(sql, Config.DATABASES[self.company])
-            # ⭐ No email columns to merge - they are completely removed
             if module_name == "Score":
                 df = self.rename_score_columns(df)
+                df = self._merge_manager_lookup(df)
             return df
         except Exception as e:
             self.logger.error(f"Query failed for {module_name}: {e}")
             return pd.DataFrame()
+            
+    def _merge_manager_lookup(self, df):
+        if df.empty or 'PUName' not in df.columns:
+            return df
+            
+        try:
+            if os.path.exists(Config.LOOKUP_FILE):
+                all_sheets = pd.read_excel(Config.LOOKUP_FILE, sheet_name=None)
+                lookup_df = None
+                
+                # Prioritize sheet based on company name
+                hints = []
+                if self.company.lower() == "sk": hints = ["sheet1", "sheet 1", "sk"]
+                elif self.company.lower() == "maximus": hints = ["sheet", "maximus"]
+                elif self.company.lower() == "evpl": hints = ["sheet1", "evpl", "sheet 1"]
+                
+                for hint in hints:
+                    for s_name, s_df in all_sheets.items():
+                        if s_name.lower() == hint:
+                            lookup_df = s_df
+                            break
+                    if lookup_df is not None: break
+                            
+                if lookup_df is None:
+                    lookup_df = list(all_sheets.values())[0]
+                    
+                def clean_col(c):
+                    return str(c).lower().replace(' ', '').replace('-', '').replace('_', '').replace('\n', '')
+                    
+                unit_col = next((col for col in lookup_df.columns if clean_col(col) in ['unit', 'puname', 'outlet', 'productionunit', 'unitname', 'name']), None)
+                
+                if unit_col:
+                    # Dynamic Merge: Grab all non-empty columns from the Excel file!
+                    lookup_subset = lookup_df.copy()
+                    
+                    # Drop garbage 'Unnamed' columns
+                    lookup_subset = lookup_subset.loc[:, ~lookup_subset.columns.astype(str).str.contains('^Unnamed', case=False, na=False)]
+                    lookup_subset.dropna(axis=1, how='all', inplace=True)
+                    
+                    # Rename the identifier to PUName
+                    lookup_subset.rename(columns={unit_col: 'PUName'}, inplace=True)
+                    
+                    # Strip whitespace from column headers
+                    rename_dict = {col: str(col).strip() for col in lookup_subset.columns}
+                    lookup_subset.rename(columns=rename_dict, inplace=True)
+                    
+                    df = pd.merge(df, lookup_subset, on='PUName', how='left')
+                    
+                    # Reorder: PUName first, then all the manager/lookup columns, then the original data
+                    new_lookup_cols = [c for c in lookup_subset.columns if c != 'PUName' and c in df.columns]
+                    original_score_cols = [c for c in df.columns if c not in new_lookup_cols and c != 'PUName']
+                    
+                    final_cols = ['PUName'] + new_lookup_cols + original_score_cols
+                    df = df[final_cols]
+                    
+                    df.fillna("", inplace=True)
+                    
+        except Exception as e:
+            self.logger.error(f"Failed to merge manager lookup: {e}")
+            
+        return df
    
     def rename_score_columns(self, df):
         column_renames = {
@@ -806,6 +883,10 @@ class MainApp(tk.Toplevel):
         self.schedule_btn.config(state="normal")
         self.upload_grn_btn.config(state="normal")
         self.is_loading = False
+        
+        current_time = datetime.now().strftime("%I:%M:%S %p")
+        if hasattr(self, 'last_refreshed_btn'):
+            self.last_refreshed_btn.config(text=f"🕒 Last Refreshed: {current_time}")
        
         total_records = sum(len(df) for df in self.all_data.values())
         self.stats_labels["📊 Total Records"].config(text=f"{total_records:,}")
@@ -860,10 +941,11 @@ class MainApp(tk.Toplevel):
                 with pd.ExcelWriter(filepath, engine="openpyxl", mode='w') as writer:
                     for module_name, df in self.all_data.items():
                         if not df.empty:
-                            # ⭐ No email columns to remove - they don't exist
+                            # The lookup columns (Site Manager Name, Area Manager Incharge) are already
+                            # merged in load_module_data, so df_to_export already contains them in the right order!
                             df_to_export = df.copy()
-                            if module_name == "Score":
-                                df_to_export = self.rename_score_columns(df_to_export)
+                            if module_name == "Score" and 'PUName' not in df_to_export.columns:
+                                df_to_export.rename(columns={'PUName': 'Unit'}, inplace=True)
                            
                             df_to_export.to_excel(writer, sheet_name=module_name, index=False)
                            

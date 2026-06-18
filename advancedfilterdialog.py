@@ -56,6 +56,10 @@ class ColumnFilterDialog(tk.Toplevel):
             "Is greater than or equal to",
             "Is less than",
             "Is less than or equal to",
+            "Contains",
+            "Does not contain",
+            "Starts with",
+            "Ends with",
             "Is null",
             "Is not null"
         ]
@@ -80,7 +84,7 @@ class ColumnFilterDialog(tk.Toplevel):
         self.op1_cb = ttk.Combobox(main_frame, textvariable=self.op1_var, values=self.operators, state="readonly", font=("Segoe UI", 9))
         self.op1_cb.pack(fill="x", pady=(0, 5))
         
-        self.val1_entry = ttk.Spinbox(main_frame, font=("Segoe UI", 9), from_=-999999999, to=999999999)
+        self.val1_entry = ttk.Entry(main_frame, font=("Segoe UI", 9))
         self.val1_entry.pack(fill="x", pady=(0, 15))
         
         # AND/OR logic
@@ -95,7 +99,7 @@ class ColumnFilterDialog(tk.Toplevel):
         self.op2_cb = ttk.Combobox(main_frame, textvariable=self.op2_var, values=self.operators, state="readonly", font=("Segoe UI", 9))
         self.op2_cb.pack(fill="x", pady=(0, 5))
         
-        self.val2_entry = ttk.Spinbox(main_frame, font=("Segoe UI", 9), from_=-999999999, to=999999999)
+        self.val2_entry = ttk.Entry(main_frame, font=("Segoe UI", 9))
         self.val2_entry.pack(fill="x", pady=(0, 20))
         
         # Pre-fill existing if any
@@ -145,4 +149,8 @@ class ColumnFilterDialog(tk.Toplevel):
         clear_btn = tk.Button(btn_frame, text="Clear", bg=Config.COLORS["white"], fg=Config.COLORS["dark"], font=("Segoe UI", 9), relief="solid", bd=1, command=clear_filter, width=12)
         clear_btn.pack(side="left")
 
-
+        # Allow pressing Enter to apply filter
+        self.bind("<Return>", lambda e: apply_filter())
+        
+        # Focus the first entry box automatically
+        self.val1_entry.focus_set()
